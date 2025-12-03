@@ -33,54 +33,67 @@ export default function Home() {
       </header>
 
       <main className="flex-1">
-        {/* Hero Section */}
-        <section className="relative py-12 md:py-24 overflow-hidden bg-white">
+        {/* Hero Section - 3 Column Layout */}
+        <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-white to-sky-50/30">
           <div className="container relative z-10">
-            <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
-              {/* Left Content */}
-              <div className="flex-1 text-center lg:text-left pt-8 lg:pt-0">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight text-slate-900">
-                  完全オンライン会社設立
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              
+              {/* Left Image (Person) - 3 cols */}
+              <div className="lg:col-span-3 order-2 lg:order-1 flex justify-center lg:justify-end">
+                <img 
+                  src="/hero-main.png" 
+                  alt="PC操作をする女性" 
+                  className="w-full max-w-[280px] lg:max-w-full h-auto object-contain drop-shadow-lg transform lg:scale-110 lg:translate-x-4" 
+                />
+              </div>
+
+              {/* Center Content (Text) - 5 cols */}
+              <div className="lg:col-span-5 order-1 lg:order-2 text-center z-20 px-4">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight text-slate-900 whitespace-nowrap">
+                  完全オンライン<br className="hidden lg:block"/>会社設立
                 </h1>
-                <p className="text-xl md:text-2xl text-slate-600 mb-8 font-medium">
+                <p className="text-lg md:text-xl text-slate-600 mb-8 font-medium">
                   申請まで完全代行・電話対応なし・効率重視
                 </p>
                 
-                <div className="flex flex-col sm:flex-row items-center gap-4 mb-10 justify-center lg:justify-start">
-                  <div className="flex items-center gap-2 bg-white/80 backdrop-blur border border-slate-200 px-4 py-2 rounded-full shadow-sm text-slate-700 font-medium">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-500" />
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-10">
+                  <div className="flex items-center gap-2 bg-white border border-slate-200 px-4 py-2 rounded-full shadow-sm text-slate-700 text-sm font-bold whitespace-nowrap">
+                    <CheckCircle2 className="h-4 w-4 text-emerald-500" />
                     司法書士による確実な手続き
                   </div>
-                  <div className="flex items-center gap-2 bg-white/80 backdrop-blur border border-slate-200 px-4 py-2 rounded-full shadow-sm text-slate-700 font-medium">
-                    <CreditCard className="h-5 w-5 text-sky-500" />
+                  <div className="flex items-center gap-2 bg-white border border-slate-200 px-4 py-2 rounded-full shadow-sm text-slate-700 text-sm font-bold whitespace-nowrap">
+                    <CreditCard className="h-4 w-4 text-sky-500" />
                     マイナンバーカード活用
                   </div>
                 </div>
                 
-                <Button variant="cta" size="xl" className="w-full sm:w-auto px-10 py-6 text-lg bg-red-500 hover:bg-red-600 text-white shadow-xl shadow-red-500/20 rounded-full transition-transform hover:-translate-y-1" onClick={() => window.location.href='#plans'}>
+                <Button variant="cta" size="xl" className="w-full sm:w-auto px-12 py-6 text-lg bg-red-500 hover:bg-red-600 text-white shadow-xl shadow-red-500/20 rounded-full transition-transform hover:-translate-y-1" onClick={() => window.location.href='#plans'}>
                   プランを確認して申し込む
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </div>
-              
-              {/* Right Image Composition */}
-              <div className="flex-1 relative w-full max-w-2xl h-[400px] md:h-[500px] flex items-center justify-center">
-                {/* Main Hero Image (Person/Desk) */}
-                <div className="absolute left-0 bottom-0 w-2/3 z-20 transform translate-y-4">
-                  <img src="/hero-main.png" alt="PC操作をする女性" className="w-full h-auto object-contain drop-shadow-xl" />
-                </div>
-                
-                {/* Flow/Card Image */}
-                <div className="absolute right-0 top-0 w-2/3 z-10 transform -translate-y-4">
-                  <img src="/hero-flow.png" alt="マイナンバーカードと手続きフロー" className="w-full h-auto object-contain drop-shadow-lg" />
-                </div>
+
+              {/* Right Image (Flow) - 4 cols */}
+              <div className="lg:col-span-4 order-3 lg:order-3 flex justify-center lg:justify-start">
+                <img 
+                  src="/hero-flow.png" 
+                  alt="マイナンバーカードと手続きフロー" 
+                  className="w-full max-w-[320px] lg:max-w-full h-auto object-contain drop-shadow-lg transform lg:-translate-x-4" 
+                />
               </div>
+
             </div>
+          </div>
+          
+          {/* Background Decorative Elements */}
+          <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+            <div className="absolute top-1/4 left-0 w-64 h-64 bg-sky-100/50 rounded-full blur-3xl opacity-60 mix-blend-multiply"></div>
+            <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-50/50 rounded-full blur-3xl opacity-60 mix-blend-multiply"></div>
           </div>
         </section>
 
         {/* Difference Section (Comparison Table) */}
-        <section id="difference" className="py-24 bg-sky-50/50">
+        <section id="difference" className="py-24 bg-white">
           <div className="container">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-slate-900 mb-4">
@@ -138,7 +151,7 @@ export default function Home() {
         </section>
 
         {/* Service Details (Can/Cannot/Need) */}
-        <section id="details" className="py-24 bg-white">
+        <section id="details" className="py-24 bg-slate-50/50">
           <div className="container">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-slate-900 mb-4">
@@ -224,7 +237,7 @@ export default function Home() {
         </section>
 
         {/* Plans Section */}
-        <section id="plans" className="py-24 bg-sky-50/30">
+        <section id="plans" className="py-24 bg-white">
           <div className="container">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-slate-900 mb-4">
@@ -335,7 +348,7 @@ export default function Home() {
         </section>
 
         {/* Process Section */}
-        <section id="flow" className="py-24 bg-white">
+        <section id="flow" className="py-24 bg-slate-50/50">
           <div className="container">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-slate-900 mb-4">
@@ -370,7 +383,7 @@ export default function Home() {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-24 bg-slate-50 border-t border-slate-100">
+        <section className="py-24 bg-white border-t border-slate-100">
           <div className="container">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold mb-4 text-slate-900">
@@ -403,7 +416,7 @@ export default function Home() {
         </section>
 
         {/* Final CTA */}
-        <section className="py-24 bg-white text-center">
+        <section className="py-24 bg-slate-50 text-center">
           <div className="container">
             <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
               あなたのニーズに合うプランで<br />会社設立を始めませんか？
@@ -423,7 +436,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="bg-slate-50 text-slate-500 py-12 border-t border-slate-200">
+      <footer className="bg-white text-slate-500 py-12 border-t border-slate-200">
         <div className="container text-center">
           <div className="flex items-center justify-center gap-2 font-bold text-xl text-slate-800 mb-4">
             <img src="/logo.png" alt="司法書士法人そうぞう" className="h-8 w-auto opacity-80" />
