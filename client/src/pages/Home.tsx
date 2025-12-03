@@ -34,17 +34,17 @@ export default function Home() {
 
       <main className="flex-1">
         {/* Hero Section - Full Image with Overlay Button */}
-        <section className="relative w-full bg-slate-50">
-          <div className="container relative py-8 md:py-12 flex flex-col items-center">
-            <div className="relative w-full max-w-6xl mx-auto">
+        <section className="relative w-full bg-slate-50 overflow-hidden">
+          <div className="container-fluid relative py-0 flex flex-col items-center">
+            <div className="relative w-full">
               <img 
                 src="/hero-full.png" 
                 alt="完全オンライン会社設立 - 申請まで完全代行・電話対応なし・効率重視" 
-                className="w-full h-auto object-contain drop-shadow-sm rounded-xl" 
+                className="w-full h-auto object-cover md:object-contain min-h-[600px] md:min-h-0" 
               />
               
               {/* Overlay CTA Button - Positioned absolutely on desktop, relatively on mobile */}
-              <div className="absolute bottom-[15%] left-1/2 transform -translate-x-1/2 w-full text-center hidden md:block">
+              <div className="absolute bottom-[10%] left-1/2 transform -translate-x-1/2 w-full text-center hidden md:block">
                 <Button 
                   variant="cta" 
                   size="xl" 
