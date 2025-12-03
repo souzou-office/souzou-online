@@ -1,308 +1,469 @@
 import { Badge, Button, Card, CardContent, CardHeader, CardTitle } from "@/components/ui/custom-ui";
-import { AlertTriangle, ArrowRight, Check, CheckCircle2, ChevronRight, CreditCard, FileText, HelpCircle, Info, LayoutDashboard, ShieldCheck, Smartphone, UserCheck, X, Zap } from "lucide-react";
+import { AlertTriangle, ArrowRight, Check, CheckCircle2, CreditCard, FileText, ShieldCheck, Smartphone, X, Zap } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#F5F7F9] font-sans text-slate-800">
-      {/* Header - Administrative Style */}
-      <header className="bg-white border-b border-slate-200 shadow-sm sticky top-0 z-50">
-        <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-4">
-            <img src="/logo.png" alt="司法書士法人そうぞう" className="h-8 w-auto" />
-            <div className="hidden md:block h-6 w-px bg-slate-300"></div>
-            <span className="hidden md:block text-sm font-bold text-slate-600">完全オンライン会社設立サービス</span>
+    <div className="min-h-screen flex flex-col bg-white font-sans text-slate-700">
+      {/* Header */}
+      <header className="sticky top-0 z-50 w-full border-b border-slate-100 bg-white/95 backdrop-blur-sm shadow-sm">
+        <div className="container flex h-20 items-center justify-between">
+          {/* Logo */}
+          <div className="flex items-center">
+            <img src="/logo.png" alt="司法書士法人そうぞう" className="h-10 md:h-12 w-auto object-contain" />
           </div>
-          <nav className="flex items-center gap-4 text-sm">
-            <a href="#faq" className="hidden md:flex items-center gap-1 text-slate-600 hover:text-blue-700 hover:underline">
-              <HelpCircle className="h-4 w-4" />
-              よくある質問
-            </a>
-            <a href="#contact" className="hidden md:flex items-center gap-1 text-slate-600 hover:text-blue-700 hover:underline">
-              <Info className="h-4 w-4" />
-              お問い合わせ
-            </a>
-            <Button variant="outline" size="sm" className="bg-blue-600 text-white border-none hover:bg-blue-700 shadow-sm">
-              ログイン
-            </Button>
-          </nav>
+          
+          {/* Desktop Nav */}
+          <div className="hidden md:flex items-center gap-8">
+            <nav className="flex gap-6 text-sm font-medium text-slate-600">
+              <a href="#difference" className="hover:text-sky-500 transition-colors">他社との違い</a>
+              <a href="#details" className="hover:text-sky-500 transition-colors">サービス詳細</a>
+              <a href="#plans" className="hover:text-sky-500 transition-colors">料金プラン</a>
+              <a href="#flow" className="hover:text-sky-500 transition-colors">流れ</a>
+            </nav>
+            <div className="flex gap-3">
+              <Button variant="outline" size="sm" className="border-sky-500 text-sky-600 hover:bg-sky-50">
+                申請質問
+              </Button>
+              <Button variant="default" size="sm" className="bg-sky-500 hover:bg-sky-600 text-white shadow-md">
+                通知定款情報の変更
+              </Button>
+            </div>
+          </div>
         </div>
       </header>
 
-      <main className="flex-1 pb-20">
-        {/* Hero Area - Functional & Clean */}
-        <section className="bg-white border-b border-slate-200 pb-12 pt-10 md:pt-16">
-          <div className="container">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-blue-50 text-blue-700 text-xs font-bold border border-blue-100">
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-                  </span>
-                  マイナンバーカード対応
+      <main className="flex-1">
+        {/* Hero Section - Rebuilt with HTML/CSS for High Quality & Scale */}
+        <section className="relative w-full bg-gradient-to-b from-slate-50 to-white overflow-hidden">
+          {/* Background Decorative Elements */}
+          <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+            <div className="absolute -top-[20%] -right-[10%] w-[50%] h-[50%] bg-sky-100/50 rounded-full blur-3xl opacity-60"></div>
+            <div className="absolute top-[20%] -left-[10%] w-[40%] h-[40%] bg-blue-50/50 rounded-full blur-3xl opacity-60"></div>
+          </div>
+
+          <div className="container relative py-16 md:py-24 lg:py-32 flex flex-col items-center">
+            
+            {/* Main Content Container */}
+            <div className="w-full max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center">
+              
+              {/* Left Column: Person Image (Visual Anchor) */}
+              <div className="lg:col-span-4 flex justify-center lg:justify-start order-2 lg:order-1">
+                <div className="relative w-full max-w-md">
+                  <div className="absolute inset-0 bg-sky-200/20 rounded-full blur-2xl transform scale-90 translate-y-4"></div>
+                  <img 
+                    src="/hero-person.png" 
+                    alt="PCで作業する女性" 
+                    className="relative z-10 w-full h-auto object-contain drop-shadow-xl transform hover:scale-105 transition-transform duration-500" 
+                  />
                 </div>
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight tracking-tight">
-                  法人設立の手続きを<br />
-                  <span className="text-blue-600">オンラインで完結</span>
-                </h1>
-                <p className="text-slate-600 text-lg leading-relaxed">
-                  司法書士が完全代行。法務局への出頭も、書類の郵送も不要。<br />
-                  マイナンバーカードがあれば、最短3日で会社が作れます。
-                </p>
+              </div>
+
+              {/* Center Column: Text & CTA (Core Message) */}
+              <div className="lg:col-span-4 text-center order-1 lg:order-2 z-20">
+                <Badge variant="outline" className="mb-6 px-4 py-1.5 text-sm font-bold border-sky-500 text-sky-600 bg-sky-50">
+                  司法書士による確実な手続き
+                </Badge>
                 
-                {/* Primary Action Buttons - Card Style */}
-                <div className="grid gap-4 mt-8">
-                  <button 
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+                  完全オンライン<br/>
+                  <span className="text-sky-500">会社設立</span>
+                </h1>
+                
+                <p className="text-lg md:text-xl text-slate-600 font-medium mb-8 leading-relaxed">
+                  申請まで完全代行・電話対応なし<br/>
+                  <span className="text-slate-500 text-base">効率重視のスマートな起業体験</span>
+                </p>
+
+                <div className="flex flex-col gap-4 items-center w-full max-w-xs mx-auto">
+                  <Button 
+                    variant="cta" 
+                    size="xl" 
+                    className="w-full py-8 text-xl bg-red-500 hover:bg-red-600 text-white shadow-xl shadow-red-500/30 rounded-full transition-all hover:-translate-y-1 border-4 border-white/30 backdrop-blur-sm group" 
                     onClick={() => window.location.href='#plans'}
-                    className="group relative flex items-center justify-between w-full p-6 bg-blue-600 hover:bg-blue-700 text-white rounded-xl shadow-md transition-all hover:shadow-lg text-left border border-blue-700"
                   >
-                    <div>
-                      <div className="text-sm font-medium opacity-90 mb-1">まずはここから</div>
-                      <div className="text-xl md:text-2xl font-bold flex items-center gap-2">
-                        <LayoutDashboard className="h-6 w-6" />
-                        プランを確認して申し込む
-                      </div>
-                    </div>
-                    <ChevronRight className="h-8 w-8 opacity-80 group-hover:translate-x-1 transition-transform" />
-                  </button>
-
-                  <div className="grid grid-cols-2 gap-4">
-                    <button 
-                      onClick={() => window.location.href='#details'}
-                      className="flex items-center justify-center gap-2 p-4 bg-white border border-slate-300 text-slate-700 rounded-lg hover:bg-slate-50 hover:border-slate-400 transition-all font-bold shadow-sm"
-                    >
-                      <FileText className="h-5 w-5 text-slate-500" />
-                      サービス詳細・条件
-                    </button>
-                    <button 
-                      onClick={() => window.location.href='#flow'}
-                      className="flex items-center justify-center gap-2 p-4 bg-white border border-slate-300 text-slate-700 rounded-lg hover:bg-slate-50 hover:border-slate-400 transition-all font-bold shadow-sm"
-                    >
-                      <CheckCircle2 className="h-5 w-5 text-slate-500" />
-                      設立までの流れ
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              {/* Right Side Illustration - Minimal & Tech */}
-              <div className="hidden md:flex justify-center relative">
-                <div className="absolute inset-0 bg-gradient-to-tr from-blue-50 to-white rounded-full blur-3xl opacity-50"></div>
-                <img 
-                  src="/hero-new-abstract-2.png" 
-                  alt="Online Registration" 
-                  className="relative z-10 w-full max-w-md object-contain drop-shadow-xl"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Information / News Style Section */}
-        <section className="py-8 container">
-          <div className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
-            <div className="bg-slate-50 px-6 py-4 border-b border-slate-200 flex items-center gap-2">
-              <Info className="h-5 w-5 text-blue-600" />
-              <h2 className="font-bold text-slate-800">サービスの特徴・お知らせ</h2>
-            </div>
-            <div className="divide-y divide-slate-100">
-              <div className="p-4 md:p-6 flex flex-col md:flex-row gap-4 md:items-start hover:bg-slate-50/50 transition-colors">
-                <span className="shrink-0 inline-block px-3 py-1 bg-red-100 text-red-700 text-xs font-bold rounded">重要</span>
-                <div>
-                  <h3 className="font-bold text-slate-800 mb-1">マイナンバーカードが必須です</h3>
-                  <p className="text-sm text-slate-600">
-                    当サービスは完全オンライン化により低価格・高速度を実現しているため、発起人・取締役全員のマイナンバーカードと署名用パスワードが必要です。
+                    プランを確認して申し込む
+                    <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                  <p className="text-xs text-slate-400 font-medium">
+                    最短3日で設立可能
                   </p>
                 </div>
               </div>
-              <div className="p-4 md:p-6 flex flex-col md:flex-row gap-4 md:items-start hover:bg-slate-50/50 transition-colors">
-                <span className="shrink-0 inline-block px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded">メリット</span>
-                <div>
-                  <h3 className="font-bold text-slate-800 mb-1">定款印紙代 0円（電子定款対応）</h3>
-                  <p className="text-sm text-slate-600">
-                    紙の定款で必要な4万円の収入印紙代がかかりません。電子定款作成手数料はプラン料金に含まれています。
-                  </p>
+
+              {/* Right Column: Flow Diagram (Process Visual) */}
+              <div className="lg:col-span-4 flex justify-center lg:justify-end order-3">
+                <div className="relative w-full max-w-md">
+                  <div className="absolute inset-0 bg-blue-100/30 rounded-3xl blur-xl transform rotate-3 scale-95"></div>
+                  <img 
+                    src="/hero-flow.png" 
+                    alt="マイナンバーカードを活用したデジタルフロー" 
+                    className="relative z-10 w-full h-auto object-contain drop-shadow-lg rounded-xl bg-white/50 backdrop-blur-sm border border-white/50 p-2" 
+                  />
                 </div>
               </div>
-              <div className="p-4 md:p-6 flex flex-col md:flex-row gap-4 md:items-start hover:bg-slate-50/50 transition-colors">
-                <span className="shrink-0 inline-block px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold rounded">安心</span>
-                <div>
-                  <h3 className="font-bold text-slate-800 mb-1">司法書士による完全代行</h3>
-                  <p className="text-sm text-slate-600">
-                    システムによる自動生成ではなく、国家資格者である司法書士が書類作成から申請まで責任を持って行います。
-                  </p>
-                </div>
-              </div>
+
             </div>
           </div>
         </section>
 
-        {/* Plans Grid - Dashboard Style */}
-        <section id="plans" className="py-12 container">
-          <div className="flex items-center gap-2 mb-6">
-            <LayoutDashboard className="h-6 w-6 text-blue-600" />
-            <h2 className="text-2xl font-bold text-slate-900">料金プラン選択</h2>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-6">
-            {/* Light Plan */}
-            <div className="bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col overflow-hidden">
-              <div className="bg-slate-50 p-4 border-b border-slate-100 text-center">
-                <h3 className="font-bold text-slate-700">ライトプラン</h3>
-                <div className="text-xs text-slate-500 mt-1">コスト重視の方へ</div>
-              </div>
-              <div className="p-6 text-center border-b border-slate-100">
-                <div className="text-3xl font-bold text-slate-900">¥30,000</div>
-                <div className="text-xs text-slate-400 mt-1">（税込）</div>
-              </div>
-              <div className="p-6 flex-1">
-                <ul className="space-y-3 text-sm text-slate-600">
-                  <li className="flex items-center gap-2"><Check className="h-4 w-4 text-blue-500" /> 設立登記申請代行</li>
-                  <li className="flex items-center gap-2"><Check className="h-4 w-4 text-blue-500" /> 電子定款作成（印紙代0円）</li>
-                  <li className="flex items-center gap-2 text-slate-400"><X className="h-4 w-4" /> 設立日指定不可</li>
-                  <li className="flex items-center gap-2 text-slate-400"><X className="h-4 w-4" /> 事前相談なし</li>
-                </ul>
-              </div>
-              <div className="p-4 bg-slate-50 border-t border-slate-100">
-                <Button className="w-full bg-slate-700 hover:bg-slate-800 text-white" onClick={() => window.open('https://forms.google.com/ライトプラン申込フォーム', '_blank')}>
-                  選択する
-                </Button>
-              </div>
-            </div>
-
-            {/* Middle Plan - Highlighted */}
-            <div className="bg-white rounded-xl border-2 border-blue-500 shadow-md flex flex-col overflow-hidden relative transform md:-translate-y-2">
-              <div className="absolute top-0 inset-x-0 h-1 bg-blue-500"></div>
-              <div className="absolute top-3 right-3 bg-yellow-400 text-slate-900 text-[10px] font-bold px-2 py-0.5 rounded">推奨</div>
-              <div className="bg-blue-50 p-4 border-b border-blue-100 text-center">
-                <h3 className="font-bold text-blue-800">ミドルプラン</h3>
-                <div className="text-xs text-blue-600 mt-1">標準的なサポート</div>
-              </div>
-              <div className="p-6 text-center border-b border-slate-100">
-                <div className="text-4xl font-bold text-blue-600">¥100,000</div>
-                <div className="text-xs text-slate-400 mt-1">（税込）</div>
-              </div>
-              <div className="p-6 flex-1">
-                <ul className="space-y-3 text-sm text-slate-700 font-medium">
-                  <li className="flex items-center gap-2"><Check className="h-4 w-4 text-blue-600" /> ライトプランの全内容</li>
-                  <li className="flex items-center gap-2"><Check className="h-4 w-4 text-blue-600" /> 設立日指定可能</li>
-                  <li className="flex items-center gap-2"><Check className="h-4 w-4 text-blue-600" /> オンライン面談（1回）</li>
-                  <li className="flex items-center gap-2"><Check className="h-4 w-4 text-blue-600" /> 税務・社保届出サポート</li>
-                </ul>
-              </div>
-              <div className="p-4 bg-blue-50 border-t border-blue-100">
-                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white shadow-sm" onClick={() => window.open('https://forms.google.com/ミドルプラン申込フォーム', '_blank')}>
-                  選択する
-                </Button>
-              </div>
-            </div>
-
-            {/* High Plan */}
-            <div className="bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col overflow-hidden">
-              <div className="bg-slate-50 p-4 border-b border-slate-100 text-center">
-                <h3 className="font-bold text-slate-700">高額プラン</h3>
-                <div className="text-xs text-slate-500 mt-1">フルサポート</div>
-              </div>
-              <div className="p-6 text-center border-b border-slate-100">
-                <div className="text-3xl font-bold text-slate-900">¥500,000<span className="text-sm font-normal">〜</span></div>
-                <div className="text-xs text-slate-400 mt-1">（税込）</div>
-              </div>
-              <div className="p-6 flex-1">
-                <ul className="space-y-3 text-sm text-slate-600">
-                  <li className="flex items-center gap-2"><Check className="h-4 w-4 text-blue-500" /> ミドルプランの全内容</li>
-                  <li className="flex items-center gap-2"><Check className="h-4 w-4 text-blue-500" /> 定款フルカスタマイズ</li>
-                  <li className="flex items-center gap-2"><Check className="h-4 w-4 text-blue-500" /> 事業計画書作成支援</li>
-                  <li className="flex items-center gap-2"><Check className="h-4 w-4 text-blue-500" /> 投資契約書作成支援</li>
-                </ul>
-              </div>
-              <div className="p-4 bg-slate-50 border-t border-slate-100">
-                <Button className="w-full bg-slate-700 hover:bg-slate-800 text-white" onClick={() => window.open('https://forms.google.com/高額プラン申込フォーム', '_blank')}>
-                  選択する
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Comparison Table - Data Grid Style */}
-        <section id="difference" className="py-12 container">
-          <div className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
-            <div className="bg-slate-50 px-6 py-4 border-b border-slate-200">
-              <h2 className="font-bold text-slate-800">他社サービスとの比較</h2>
-            </div>
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm text-left">
-                <thead className="text-xs text-slate-500 uppercase bg-slate-50 border-b border-slate-200">
-                  <tr>
-                    <th className="px-6 py-3 font-medium">比較項目</th>
-                    <th className="px-6 py-3 font-bold text-blue-700 bg-blue-50/50">当サービス</th>
-                    <th className="px-6 py-3 font-medium">一般的な事務所</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-100">
-                  <tr className="bg-white hover:bg-slate-50">
-                    <td className="px-6 py-4 font-medium text-slate-900">費用</td>
-                    <td className="px-6 py-4 text-blue-700 font-bold bg-blue-50/30">3万円〜</td>
-                    <td className="px-6 py-4 text-slate-500">10万円〜</td>
-                  </tr>
-                  <tr className="bg-white hover:bg-slate-50">
-                    <td className="px-6 py-4 font-medium text-slate-900">来所・面談</td>
-                    <td className="px-6 py-4 text-blue-700 font-bold bg-blue-50/30">不要（完全オンライン）</td>
-                    <td className="px-6 py-4 text-slate-500">必須（複数回）</td>
-                  </tr>
-                  <tr className="bg-white hover:bg-slate-50">
-                    <td className="px-6 py-4 font-medium text-slate-900">印鑑証明書</td>
-                    <td className="px-6 py-4 text-blue-700 font-bold bg-blue-50/30">不要（マイナンバーカード）</td>
-                    <td className="px-6 py-4 text-slate-500">必須</td>
-                  </tr>
-                  <tr className="bg-white hover:bg-slate-50">
-                    <td className="px-6 py-4 font-medium text-slate-900">対応スピード</td>
-                    <td className="px-6 py-4 text-blue-700 font-bold bg-blue-50/30">最短3日</td>
-                    <td className="px-6 py-4 text-slate-500">2週間〜</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-
-        {/* Footer - Official Style */}
-        <footer className="bg-slate-800 text-slate-300 py-12 mt-12">
+        {/* Difference Section (Comparison Table) */}
+        <section id="difference" className="py-24 bg-white">
           <div className="container">
-            <div className="grid md:grid-cols-4 gap-8 mb-8">
-              <div className="col-span-2">
-                <div className="flex items-center gap-2 mb-4 text-white font-bold text-lg">
-                  <img src="/logo.png" alt="司法書士法人そうぞう" className="h-8 w-auto brightness-0 invert" />
-                  司法書士法人そうぞう
-                </div>
-                <p className="text-sm text-slate-400 leading-relaxed max-w-md">
-                  福岡市を拠点に、全国の会社設立を完全オンラインで支援する司法書士法人です。
-                  最新のテクノロジーと法律の専門知識を融合させ、起業家の皆様をサポートします。
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-slate-900 mb-4">
+                他社サービスとの違い
+              </h2>
+              <p className="text-slate-600">
+                徹底的な効率化により、高品質なサービスを低価格で提供します。
+              </p>
+            </div>
+
+            <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100">
+              <div className="overflow-x-auto">
+                <table className="w-full text-left border-collapse">
+                  <thead>
+                    <tr className="bg-slate-50 text-slate-700 border-b border-slate-200">
+                      <th className="p-6 font-bold text-center w-1/4">比較項目</th>
+                      <th className="p-6 font-bold text-center w-1/3 bg-sky-100/50 text-sky-800 relative border-x border-sky-100">
+                        当サービス
+                        <div className="absolute top-0 right-0 bg-yellow-400 text-slate-900 text-[10px] font-bold px-2 py-0.5 rounded-bl">RECOMMENDED</div>
+                      </th>
+                      <th className="p-6 font-bold text-center w-1/3 text-slate-500">一般的な事務所</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-slate-700">
+                    <tr className="border-b border-slate-100 hover:bg-slate-50/50">
+                      <td className="p-5 font-bold text-center bg-slate-50/50">費用</td>
+                      <td className="p-5 text-center font-bold text-red-500 bg-sky-50/30 text-lg border-x border-sky-50">3万円〜</td>
+                      <td className="p-5 text-center text-slate-500">10万円〜</td>
+                    </tr>
+                    <tr className="border-b border-slate-100 hover:bg-slate-50/50">
+                      <td className="p-5 font-bold text-center bg-slate-50/50">来所・面談</td>
+                      <td className="p-5 text-center font-bold text-sky-600 bg-sky-50/30 border-x border-sky-50">一切不要（完全オンライン）</td>
+                      <td className="p-5 text-center text-slate-500">必須（複数回）</td>
+                    </tr>
+                    <tr className="border-b border-slate-100 hover:bg-slate-50/50">
+                      <td className="p-5 font-bold text-center bg-slate-50/50">印鑑証明書</td>
+                      <td className="p-5 text-center font-bold text-sky-600 bg-sky-50/30 border-x border-sky-50">不要（マイナンバーカード）</td>
+                      <td className="p-5 text-center text-slate-500">必須（取得の手間あり）</td>
+                    </tr>
+                    <tr className="border-b border-slate-100 hover:bg-slate-50/50">
+                      <td className="p-5 font-bold text-center bg-slate-50/50">対応スピード</td>
+                      <td className="p-5 text-center font-bold text-sky-600 bg-sky-50/30 border-x border-sky-50">最短3日</td>
+                      <td className="p-5 text-center text-slate-500">2週間〜1ヶ月</td>
+                    </tr>
+                    <tr className="hover:bg-slate-50/50">
+                      <td className="p-5 font-bold text-center bg-slate-50/50">定款印紙代</td>
+                      <td className="p-5 text-center font-bold text-sky-600 bg-sky-50/30 border-x border-sky-50">0円（電子定款）</td>
+                      <td className="p-5 text-center text-slate-500">4万円（紙の場合）</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Service Details (Can/Cannot/Need) */}
+        <section id="details" className="py-24 bg-slate-50/50">
+          <div className="container">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-slate-900 mb-4">
+                サービスの詳細・条件
+              </h2>
+              <p className="text-slate-600">
+                事前に必ずご確認ください。効率化のため、いくつかの条件がございます。
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {/* 代行すること (Green) */}
+              <Card className="border-t-4 border-t-emerald-400 shadow-md hover:shadow-lg transition-all bg-white border-x border-b border-slate-100">
+                <CardHeader className="text-center pb-2">
+                  <div className="mx-auto bg-emerald-50 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                    <Check className="h-8 w-8 text-emerald-500" />
+                  </div>
+                  <CardTitle className="text-xl text-emerald-600">代行すること</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3 text-slate-600">
+                    <li className="flex items-start gap-2"><span className="text-emerald-500 font-bold">•</span> 定款作成・電子認証</li>
+                    <li className="flex items-start gap-2"><span className="text-emerald-500 font-bold">•</span> 設立登記申請</li>
+                    <li className="flex items-start gap-2"><span className="text-emerald-500 font-bold">•</span> 各種証明書取得</li>
+                    <li className="flex items-start gap-2"><span className="text-emerald-500 font-bold">•</span> 税務・社保届出（ミドル・高額）</li>
+                    <li className="flex items-start gap-2"><span className="text-emerald-500 font-bold">•</span> 事業計画書作成（高額のみ）</li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* 対応できないこと (Red) */}
+              <Card className="border-t-4 border-t-red-400 shadow-md hover:shadow-lg transition-all bg-white border-x border-b border-slate-100">
+                <CardHeader className="text-center pb-2">
+                  <div className="mx-auto bg-red-50 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                    <X className="h-8 w-8 text-red-500" />
+                  </div>
+                  <CardTitle className="text-xl text-red-500">対応できないこと</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3 text-slate-600">
+                    <li className="flex items-start gap-2"><span className="text-red-400 font-bold">•</span> 紙での書類作成</li>
+                    <li className="flex items-start gap-2"><span className="text-red-400 font-bold">•</span> マイナンバーカード未所持</li>
+                    <li className="flex items-start gap-2"><span className="text-red-400 font-bold">•</span> 電話相談（ライトのみ）</li>
+                    <li className="flex items-start gap-2"><span className="text-red-400 font-bold">•</span> 許認可申請</li>
+                    <li className="flex items-start gap-2"><span className="text-red-400 font-bold">•</span> 融資申込み代行</li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* 必要なもの (Blue) */}
+              <Card className="border-t-4 border-t-sky-400 shadow-md hover:shadow-lg transition-all bg-white border-x border-b border-slate-100">
+                <CardHeader className="text-center pb-2">
+                  <div className="mx-auto bg-sky-50 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                    <FileText className="h-8 w-8 text-sky-500" />
+                  </div>
+                  <CardTitle className="text-xl text-sky-500">必要なもの</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3 text-slate-600">
+                    <li className="flex items-start gap-2"><span className="text-sky-500 font-bold">•</span> マイナンバーカード</li>
+                    <li className="flex items-start gap-2"><span className="text-sky-500 font-bold">•</span> カードリーダー/スマホ</li>
+                    <li className="flex items-start gap-2"><span className="text-sky-500 font-bold">•</span> 会社基本情報</li>
+                    <li className="flex items-start gap-2"><span className="text-sky-500 font-bold">•</span> 資本金払込み</li>
+                    <li className="flex items-start gap-2"><span className="text-sky-500 font-bold">•</span> 印鑑証明書（プランにより）</li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Important Alert */}
+            <div className="max-w-4xl mx-auto mt-12 bg-amber-50 border border-amber-200 p-6 rounded-lg shadow-sm flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
+              <div className="p-3 bg-amber-100 rounded-full shrink-0">
+                <AlertTriangle className="h-8 w-8 text-amber-500" />
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-amber-800 mb-1">重要ポイント</h4>
+                <p className="text-amber-700 font-medium">
+                  マイナンバーカード必須 • 効率化のため制約あり • 許認可業種は事前相談
                 </p>
               </div>
-              <div>
-                <h4 className="text-white font-bold mb-4 text-sm">サービス</h4>
-                <ul className="space-y-2 text-sm">
-                  <li><a href="#plans" className="hover:text-white transition-colors">料金プラン</a></li>
-                  <li><a href="#details" className="hover:text-white transition-colors">サービス詳細</a></li>
-                  <li><a href="#flow" className="hover:text-white transition-colors">設立の流れ</a></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-white font-bold mb-4 text-sm">サポート</h4>
-                <ul className="space-y-2 text-sm">
-                  <li><a href="#" className="hover:text-white transition-colors">よくある質問</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">お問い合わせ</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">プライバシーポリシー</a></li>
-                </ul>
-              </div>
-            </div>
-            <div className="border-t border-slate-700 pt-8 text-center text-xs text-slate-500">
-              © 2025 Sozo Judicial Scrivener Corporation. All Rights Reserved.
             </div>
           </div>
-        </footer>
+        </section>
+
+        {/* Plans Section */}
+        <section id="plans" className="py-24 bg-white">
+          <div className="container">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-slate-900 mb-4">
+                料金プラン
+              </h2>
+              <p className="text-slate-600">
+                ニーズに合わせて3つのプランをご用意。すべて完全デジタル対応です。
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {/* Light Plan */}
+              <Card className="border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden group flex flex-col bg-white">
+                <div className="absolute top-0 left-0 w-full h-1 bg-slate-300 group-hover:bg-slate-400 transition-colors" />
+                <CardHeader className="text-center pb-2">
+                  <CardTitle className="text-xl text-slate-700">ライトプラン</CardTitle>
+                  <div className="mt-4 mb-2">
+                    <span className="text-sm align-top text-slate-500">¥</span>
+                    <span className="text-4xl font-bold text-slate-900">30,000</span>
+                  </div>
+                  <div className="text-sm text-slate-500 font-medium bg-slate-50 py-1 px-3 rounded-full inline-block border border-slate-100">
+                    効率重視・コスト最優先
+                  </div>
+                  <p className="text-sm text-slate-500 mt-3 font-bold">とにかく安く設立したい方</p>
+                </CardHeader>
+                <CardContent className="flex-1 flex flex-col">
+                  <ul className="space-y-3 text-sm text-slate-600 mb-8 flex-1">
+                    <li className="flex items-center gap-2"><Check className="h-4 w-4 text-emerald-500 shrink-0" /> 完全非対面（電話・紙不可）</li>
+                    <li className="flex items-center gap-2"><Check className="h-4 w-4 text-emerald-500 shrink-0" /> マイナンバーカード署名</li>
+                    <li className="flex items-center gap-2 text-slate-400 line-through decoration-slate-300"><X className="h-4 w-4 text-red-300 shrink-0" /> 定款カスタマイズ</li>
+                    <li className="flex items-center gap-2 text-slate-400 line-through decoration-slate-300"><X className="h-4 w-4 text-red-300 shrink-0" /> 設立日指定</li>
+                    <li className="flex items-center gap-2 text-slate-400 line-through decoration-slate-300"><X className="h-4 w-4 text-red-300 shrink-0" /> オンライン説明</li>
+                    <li className="flex items-center gap-2 text-slate-400 line-through decoration-slate-300"><X className="h-4 w-4 text-red-300 shrink-0" /> 各種届出代行</li>
+                  </ul>
+                  <Button className="w-full bg-slate-700 hover:bg-slate-800 text-white" onClick={() => window.open('https://forms.google.com/ライトプラン申込フォーム', '_blank')}>
+                    ライトプラン申し込み
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* Middle Plan */}
+              <Card className="border border-red-100 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden transform md:-translate-y-4 z-10 flex flex-col bg-white">
+                <div className="absolute top-0 left-0 w-full h-1.5 bg-red-500" />
+                <div className="absolute top-4 right-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">人気</div>
+                <CardHeader className="text-center pb-2">
+                  <CardTitle className="text-xl text-red-600 font-bold">ミドルプラン</CardTitle>
+                  <div className="mt-4 mb-2">
+                    <span className="text-sm align-top text-slate-500">¥</span>
+                    <span className="text-5xl font-bold text-slate-900">100,000</span>
+                  </div>
+                  <div className="text-sm text-red-600 font-medium bg-red-50 py-1 px-3 rounded-full inline-block border border-red-100">
+                    バランス重視・最低限の柔軟性
+                  </div>
+                  <p className="text-sm text-slate-500 mt-3 font-bold">標準的なサポートをお求めの方</p>
+                </CardHeader>
+                <CardContent className="flex-1 flex flex-col">
+                  <ul className="space-y-3 text-sm text-slate-600 mb-8 flex-1">
+                    <li className="flex items-center gap-2 font-bold text-slate-800"><Check className="h-4 w-4 text-red-500 shrink-0" /> 電話対応可・紙不可</li>
+                    <li className="flex items-center gap-2"><Check className="h-4 w-4 text-red-500 shrink-0" /> マイナンバーカード署名</li>
+                    <li className="flex items-center gap-2"><Check className="h-4 w-4 text-red-500 shrink-0" /> 定款簡易調整</li>
+                    <li className="flex items-center gap-2"><Check className="h-4 w-4 text-red-500 shrink-0" /> 設立日指定</li>
+                    <li className="flex items-center gap-2"><Check className="h-4 w-4 text-red-500 shrink-0" /> オンライン説明（1回）</li>
+                    <li className="flex items-center gap-2"><Check className="h-4 w-4 text-red-500 shrink-0" /> 社保・税務届出代行</li>
+                    <li className="flex items-center gap-2"><Check className="h-4 w-4 text-red-500 shrink-0" /> 銀行口座開設サポート</li>
+                  </ul>
+                  <Button className="w-full bg-red-500 hover:bg-red-600 text-white shadow-lg py-6 text-lg" onClick={() => window.open('https://forms.google.com/ミドルプラン申込フォーム', '_blank')}>
+                    ミドルプラン申し込み
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* High Plan */}
+              <Card className="border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden group flex flex-col bg-white">
+                <div className="absolute top-0 left-0 w-full h-1 bg-slate-300 group-hover:bg-slate-400 transition-colors" />
+                <CardHeader className="text-center pb-2">
+                  <CardTitle className="text-xl text-slate-700">高額プラン</CardTitle>
+                  <div className="mt-4 mb-2">
+                    <span className="text-sm align-top text-slate-500">¥</span>
+                    <span className="text-4xl font-bold text-slate-900">500,000</span>
+                    <span className="text-sm text-slate-500">〜</span>
+                  </div>
+                  <div className="text-sm text-slate-500 font-medium bg-slate-50 py-1 px-3 rounded-full inline-block border border-slate-100">
+                    フルサポート・投資家対応
+                  </div>
+                  <p className="text-sm text-slate-500 mt-3 font-bold">出資受け入れ・本格起業の方</p>
+                </CardHeader>
+                <CardContent className="flex-1 flex flex-col">
+                  <ul className="space-y-3 text-sm text-slate-600 mb-8 flex-1">
+                    <li className="flex items-center gap-2 font-bold text-slate-800"><Check className="h-4 w-4 text-emerald-500 shrink-0" /> 上記ミドルプランの全内容</li>
+                    <li className="flex items-center gap-2"><Check className="h-4 w-4 text-emerald-500 shrink-0" /> 定款自由設計・特殊登記</li>
+                    <li className="flex items-center gap-2"><Check className="h-4 w-4 text-emerald-500 shrink-0" /> オンライン説明（複数回）</li>
+                    <li className="flex items-center gap-2"><Check className="h-4 w-4 text-emerald-500 shrink-0" /> 事業計画書作成支援</li>
+                    <li className="flex items-center gap-2"><Check className="h-4 w-4 text-emerald-500 shrink-0" /> 株主間契約書作成</li>
+                    <li className="flex items-center gap-2"><Check className="h-4 w-4 text-emerald-500 shrink-0" /> 各種専門家との連携サポート</li>
+                  </ul>
+                  <Button className="w-full bg-slate-700 hover:bg-slate-800 text-white" onClick={() => window.open('https://forms.google.com/高額プラン申込フォーム', '_blank')}>
+                    高額プラン申し込み
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="text-center mt-12">
+              <p className="text-slate-600 mb-2">ご不明点やプラン選択のご相談</p>
+              <p className="text-slate-400 text-sm">LINEにてお気軽にお問い合わせください</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Process Section */}
+        <section id="flow" className="py-24 bg-slate-50/50">
+          <div className="container">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-slate-900 mb-4">
+                設立完了までの流れ
+              </h2>
+              <p className="text-slate-600">
+                わずか5ステップで完了。面倒な手続きはすべてお任せください。
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-5 gap-6 max-w-6xl mx-auto">
+              {[
+                { step: 1, title: "申込フォーム入力", desc: "会社情報・代表者情報・希望プランを入力します" },
+                { step: 2, title: "内容確認・調整", desc: "LINEにて詳細確認。必要に応じて内容調整を行います" },
+                { step: 3, title: "電子署名", desc: "マイナンバーカードで定款等に署名。印鑑不要です" },
+                { step: 4, title: "法務局申請", desc: "司法書士が法務局へオンライン申請。完全代行します" },
+                { step: 5, title: "設立完了", desc: "登記完了後、各種書類をお渡し。会社設立完了です" },
+              ].map((item, index) => (
+                <div key={index} className="relative flex flex-col items-center text-center group">
+                  <div className="w-16 h-16 rounded-full bg-sky-500 text-white flex items-center justify-center text-2xl font-bold mb-6 shadow-lg group-hover:bg-red-500 transition-colors relative z-10">
+                    {item.step}
+                  </div>
+                  {index < 4 && (
+                    <div className="hidden md:block absolute top-8 left-1/2 w-full h-0.5 bg-slate-200 -z-0" />
+                  )}
+                  <h4 className="font-bold text-slate-900 mb-3">{item.title}</h4>
+                  <p className="text-sm text-slate-500 leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-24 bg-white border-t border-slate-100">
+          <div className="container">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold mb-4 text-slate-900">
+                選ばれる理由
+              </h2>
+            </div>
+            <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+              <div className="bg-white border border-slate-100 p-8 rounded-2xl text-center hover:shadow-lg transition-all">
+                <div className="text-4xl mb-4">⚡</div>
+                <h4 className="font-bold text-lg mb-3 text-slate-800">効率重視の仕組み</h4>
+                <p className="text-slate-600 text-sm leading-relaxed">電話対応なし・完全オンライン化により、無駄を排除した効率的な手続きを実現</p>
+              </div>
+              <div className="bg-white border border-slate-100 p-8 rounded-2xl text-center hover:shadow-lg transition-all">
+                <div className="text-4xl mb-4">💰</div>
+                <h4 className="font-bold text-lg mb-3 text-slate-800">明確な料金体系</h4>
+                <p className="text-slate-600 text-sm leading-relaxed">3つのプランでニーズに応じた価格設定。追加料金なしの安心価格</p>
+              </div>
+              <div className="bg-white border border-slate-100 p-8 rounded-2xl text-center hover:shadow-lg transition-all">
+                <div className="text-4xl mb-4">🏛️</div>
+                <h4 className="font-bold text-lg mb-3 text-slate-800">司法書士の確実性</h4>
+                <p className="text-slate-600 text-sm leading-relaxed">2000件以上の中小企業相談実績。確実で安心の手続きをお約束</p>
+              </div>
+              <div className="bg-white border border-slate-100 p-8 rounded-2xl text-center hover:shadow-lg transition-all">
+                <div className="text-4xl mb-4">📱</div>
+                <h4 className="font-bold text-lg mb-3 text-slate-800">完全デジタル対応</h4>
+                <p className="text-slate-600 text-sm leading-relaxed">マイナンバーカード活用・オンライン申請で、書類のやり取りは一切なし</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Final CTA */}
+        <section className="py-24 bg-slate-50 text-center">
+          <div className="container">
+            <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
+              あなたのニーズに合うプランで<br />会社設立を始めませんか？
+            </h3>
+            <p className="text-xl text-slate-600 mb-10">
+              効率重視・確実・リーズナブルな会社設立サービス
+            </p>
+            <div className="flex justify-center">
+              <Button variant="cta" size="xl" className="px-12 py-8 text-xl bg-red-500 hover:bg-red-600 text-white shadow-xl rounded-full" onClick={() => window.location.href='#plans'}>
+                プランを選んで申し込む
+              </Button>
+            </div>
+            <p className="mt-6 text-slate-400 text-sm">
+              ※申込フォーム送信後、LINEにて詳細確認のご連絡をいたします
+            </p>
+          </div>
+        </section>
       </main>
+
+      <footer className="bg-white text-slate-500 py-12 border-t border-slate-200">
+        <div className="container text-center">
+          <div className="flex items-center justify-center gap-2 font-bold text-xl text-slate-800 mb-4">
+            <img src="/logo.png" alt="司法書士法人そうぞう" className="h-8 w-auto opacity-80" />
+          </div>
+          <p className="text-sm mb-8">
+            司法書士法人そうぞう
+          </p>
+          <div className="text-xs text-slate-400">
+            © 2025 司法書士法人そうぞう. All rights reserved.<br />
+            福岡市 | 司法書士 | 会社設立専門
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
