@@ -1,5 +1,5 @@
 import { Badge, Button, Card, CardContent, CardHeader, CardTitle } from "@/components/ui/custom-ui";
-import { AlertTriangle, ArrowRight, Check, CheckCircle2, CreditCard, FileText, ShieldCheck, Smartphone, X, Zap } from "lucide-react";
+import { AlertTriangle, ArrowRight, Check, CheckCircle2, CreditCard, FileText, ShieldCheck, Smartphone, X, Zap, CircleDollarSign, Landmark, PenTool } from "lucide-react";
 
 export default function Home() {
   return (
@@ -98,6 +98,104 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Service Details Section (New) */}
+        <section id="service-details" className="py-24 bg-white">
+          <div className="container">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-slate-900 mb-4">
+                当サービスの詳細
+              </h2>
+              <p className="text-slate-600">
+                完全デジタル化と効率化により、これまでにないスムーズな設立体験を提供します。
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              {/* 完全デジタル化の仕組み */}
+              <Card className="bg-slate-50 border border-slate-100 shadow-sm hover:shadow-md transition-all">
+                <CardHeader className="pb-4">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="bg-sky-100 p-2 rounded-lg">
+                      <PenTool className="h-6 w-6 text-sky-600" />
+                    </div>
+                    <CardTitle className="text-xl text-slate-800">完全デジタル化の仕組み</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div>
+                    <h4 className="font-bold text-slate-800 mb-1 flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-sky-500 rounded-full"></span>
+                      マイナンバーカードによる電子署名
+                    </h4>
+                    <p className="text-sm text-slate-600 pl-3.5">
+                      紙の定款への印鑑押印は一切不要。マイナンバーカードで確実に本人確認・署名を行います。
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-slate-800 mb-1 flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-sky-500 rounded-full"></span>
+                      オンライン申請システム活用
+                    </h4>
+                    <p className="text-sm text-slate-600 pl-3.5">
+                      法務局の登記・供託オンライン申請システムを使用し、完全オンラインで申請します。
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-slate-800 mb-1 flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-sky-500 rounded-full"></span>
+                      書類の郵送・持参は一切なし
+                    </h4>
+                    <p className="text-sm text-slate-600 pl-3.5">
+                      すべてデジタルデータで完結するため、書類のやり取りは発生しません。
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* 効率化の具体例 */}
+              <Card className="bg-slate-50 border border-slate-100 shadow-sm hover:shadow-md transition-all">
+                <CardHeader className="pb-4">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="bg-amber-100 p-2 rounded-lg">
+                      <Zap className="h-6 w-6 text-amber-600" />
+                    </div>
+                    <CardTitle className="text-xl text-slate-800">効率化の具体例</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div>
+                    <h4 className="font-bold text-slate-800 mb-1 flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-amber-500 rounded-full"></span>
+                      面談・電話対応なし（ライトプラン）
+                    </h4>
+                    <p className="text-sm text-slate-600 pl-3.5">
+                      必要な情報はすべてフォームとLINEで確認。時間の無駄を徹底排除。
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-slate-800 mb-1 flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-amber-500 rounded-full"></span>
+                      定型化されたプロセス
+                    </h4>
+                    <p className="text-sm text-slate-600 pl-3.5">
+                      よくある設立パターンを定型化し、スピードと品質を両立。
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-slate-800 mb-1 flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-amber-500 rounded-full"></span>
+                      司法書士による直接処理
+                    </h4>
+                    <p className="text-sm text-slate-600 pl-3.5">
+                      中間業者を省き、司法書士が直接すべての手続きを代行します。
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
         {/* Why Us Section */}
         <section id="why-us" className="py-24 bg-slate-50">
           <div className="container">
@@ -110,45 +208,63 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+              {/* 1. 効率重視の仕組み */}
               <Card className="bg-white border-none shadow-lg hover:shadow-xl transition-all">
                 <CardHeader className="text-center pb-2">
-                  <div className="mx-auto bg-sky-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
-                    <Zap className="h-8 w-8 text-sky-600" />
+                  <div className="mx-auto bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                    <Zap className="h-8 w-8 text-amber-600" />
                   </div>
-                  <CardTitle className="text-xl text-slate-800">圧倒的なスピード</CardTitle>
+                  <CardTitle className="text-lg font-bold text-slate-800">効率重視の仕組み</CardTitle>
                 </CardHeader>
-                <CardContent className="text-center text-slate-600">
+                <CardContent className="text-center text-slate-600 text-sm">
                   <p>
-                    完全オンライン完結のため、郵送や面談の時間をカット。最短3日で会社設立が可能です。
+                    電話対応なし・完全オンライン化により、無駄を排除した効率的な手続きを実現
                   </p>
                 </CardContent>
               </Card>
 
+              {/* 2. 明確な料金体系 */}
               <Card className="bg-white border-none shadow-lg hover:shadow-xl transition-all">
                 <CardHeader className="text-center pb-2">
                   <div className="mx-auto bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
-                    <ShieldCheck className="h-8 w-8 text-emerald-600" />
+                    <CircleDollarSign className="h-8 w-8 text-emerald-600" />
                   </div>
-                  <CardTitle className="text-xl text-slate-800">司法書士による安心対応</CardTitle>
+                  <CardTitle className="text-lg font-bold text-slate-800">明確な料金体系</CardTitle>
                 </CardHeader>
-                <CardContent className="text-center text-slate-600">
+                <CardContent className="text-center text-slate-600 text-sm">
                   <p>
-                    格安代行業者とは異なり、国家資格を持つ司法書士が責任を持って手続きを行います。
+                    3つのプランでニーズに応じた価格設定。追加料金なしの安心価格
                   </p>
                 </CardContent>
               </Card>
 
+              {/* 3. 司法書士の確実性 */}
+              <Card className="bg-white border-none shadow-lg hover:shadow-xl transition-all">
+                <CardHeader className="text-center pb-2">
+                  <div className="mx-auto bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                    <Landmark className="h-8 w-8 text-blue-600" />
+                  </div>
+                  <CardTitle className="text-lg font-bold text-slate-800">司法書士の確実性</CardTitle>
+                </CardHeader>
+                <CardContent className="text-center text-slate-600 text-sm">
+                  <p>
+                    2000件以上の中小企業相談実績。確実で安心の手続きをお約束
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* 4. 完全デジタル対応 */}
               <Card className="bg-white border-none shadow-lg hover:shadow-xl transition-all">
                 <CardHeader className="text-center pb-2">
                   <div className="mx-auto bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
                     <Smartphone className="h-8 w-8 text-indigo-600" />
                   </div>
-                  <CardTitle className="text-xl text-slate-800">スマホで完結</CardTitle>
+                  <CardTitle className="text-lg font-bold text-slate-800">完全デジタル対応</CardTitle>
                 </CardHeader>
-                <CardContent className="text-center text-slate-600">
+                <CardContent className="text-center text-slate-600 text-sm">
                   <p>
-                    マイナンバーカードとスマホがあれば、自宅にいながらすべての手続きが完了します。
+                    マイナンバーカード活用・オンライン申請で、書類のやり取りは一切なし
                   </p>
                 </CardContent>
               </Card>
