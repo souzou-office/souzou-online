@@ -1,5 +1,5 @@
 import { Badge, Button, Card, CardContent, CardHeader, CardTitle } from "@/components/ui/custom-ui";
-import { AlertTriangle, ArrowRight, Check, CheckCircle2, CreditCard, FileText, ShieldCheck, Smartphone, X, Zap, CircleDollarSign, Landmark, PenTool } from "lucide-react";
+import { AlertTriangle, ArrowRight, Check, CheckCircle2, CreditCard, FileText, ShieldCheck, Smartphone, X, Zap, CircleDollarSign, Landmark, PenTool, Clock, MessageSquare, Phone, Shield, Users } from "lucide-react";
 
 export default function Home() {
   return (
@@ -110,88 +110,114 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
               {/* 完全デジタル化の仕組み */}
-              <Card className="bg-slate-50 border border-slate-100 shadow-sm hover:shadow-md transition-all">
-                <CardHeader className="pb-4">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="bg-sky-100 p-2 rounded-lg">
-                      <PenTool className="h-6 w-6 text-sky-600" />
+              <div className="bg-sky-50 rounded-2xl p-8 border border-sky-100">
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="bg-white p-3 rounded-xl shadow-sm">
+                    <PenTool className="h-8 w-8 text-sky-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-slate-800">完全デジタル化の仕組み</h3>
+                </div>
+                
+                <div className="space-y-6">
+                  <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-sky-100 p-2 rounded-full mt-1">
+                        <CreditCard className="h-5 w-5 text-sky-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-slate-800 text-lg mb-2">マイナンバーカードによる電子署名</h4>
+                        <p className="text-slate-600 leading-relaxed">
+                          紙の定款への印鑑押印は一切不要。マイナンバーカードで確実に本人確認・署名を行います。
+                        </p>
+                      </div>
                     </div>
-                    <CardTitle className="text-xl text-slate-800">完全デジタル化の仕組み</CardTitle>
                   </div>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div>
-                    <h4 className="font-bold text-slate-800 mb-1 flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-sky-500 rounded-full"></span>
-                      マイナンバーカードによる電子署名
-                    </h4>
-                    <p className="text-sm text-slate-600 pl-3.5">
-                      紙の定款への印鑑押印は一切不要。マイナンバーカードで確実に本人確認・署名を行います。
-                    </p>
+
+                  <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-sky-100 p-2 rounded-full mt-1">
+                        <Smartphone className="h-5 w-5 text-sky-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-slate-800 text-lg mb-2">オンライン申請システム活用</h4>
+                        <p className="text-slate-600 leading-relaxed">
+                          法務局の登記・供託オンライン申請システムを使用し、完全オンラインで申請します。
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-slate-800 mb-1 flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-sky-500 rounded-full"></span>
-                      オンライン申請システム活用
-                    </h4>
-                    <p className="text-sm text-slate-600 pl-3.5">
-                      法務局の登記・供託オンライン申請システムを使用し、完全オンラインで申請します。
-                    </p>
+
+                  <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-sky-100 p-2 rounded-full mt-1">
+                        <FileText className="h-5 w-5 text-sky-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-slate-800 text-lg mb-2">書類の郵送・持参は一切なし</h4>
+                        <p className="text-slate-600 leading-relaxed">
+                          すべてデジタルデータで完結するため、書類のやり取りは発生しません。
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-slate-800 mb-1 flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-sky-500 rounded-full"></span>
-                      書類の郵送・持参は一切なし
-                    </h4>
-                    <p className="text-sm text-slate-600 pl-3.5">
-                      すべてデジタルデータで完結するため、書類のやり取りは発生しません。
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
 
               {/* 効率化の具体例 */}
-              <Card className="bg-slate-50 border border-slate-100 shadow-sm hover:shadow-md transition-all">
-                <CardHeader className="pb-4">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="bg-amber-100 p-2 rounded-lg">
-                      <Zap className="h-6 w-6 text-amber-600" />
+              <div className="bg-amber-50 rounded-2xl p-8 border border-amber-100">
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="bg-white p-3 rounded-xl shadow-sm">
+                    <Zap className="h-8 w-8 text-amber-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-slate-800">効率化の具体例</h3>
+                </div>
+                
+                <div className="space-y-6">
+                  <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-amber-100 p-2 rounded-full mt-1">
+                        <Smartphone className="h-5 w-5 text-amber-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-slate-800 text-lg mb-2">面談・電話対応なし（ライトプラン）</h4>
+                        <p className="text-slate-600 leading-relaxed">
+                          必要な情報はすべてフォームとLINEで確認。時間の無駄を徹底排除。
+                        </p>
+                      </div>
                     </div>
-                    <CardTitle className="text-xl text-slate-800">効率化の具体例</CardTitle>
                   </div>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div>
-                    <h4 className="font-bold text-slate-800 mb-1 flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-amber-500 rounded-full"></span>
-                      面談・電話対応なし（ライトプラン）
-                    </h4>
-                    <p className="text-sm text-slate-600 pl-3.5">
-                      必要な情報はすべてフォームとLINEで確認。時間の無駄を徹底排除。
-                    </p>
+
+                  <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-amber-100 p-2 rounded-full mt-1">
+                        <CheckCircle2 className="h-5 w-5 text-amber-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-slate-800 text-lg mb-2">定型化されたプロセス</h4>
+                        <p className="text-slate-600 leading-relaxed">
+                          よくある設立パターンを定型化し、スピードと品質を両立。
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-slate-800 mb-1 flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-amber-500 rounded-full"></span>
-                      定型化されたプロセス
-                    </h4>
-                    <p className="text-sm text-slate-600 pl-3.5">
-                      よくある設立パターンを定型化し、スピードと品質を両立。
-                    </p>
+
+                  <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-amber-100 p-2 rounded-full mt-1">
+                        <ShieldCheck className="h-5 w-5 text-amber-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-slate-800 text-lg mb-2">司法書士による直接処理</h4>
+                        <p className="text-slate-600 leading-relaxed">
+                          中間業者を省き、司法書士が直接すべての手続きを代行します。
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-slate-800 mb-1 flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-amber-500 rounded-full"></span>
-                      司法書士による直接処理
-                    </h4>
-                    <p className="text-sm text-slate-600 pl-3.5">
-                      中間業者を省き、司法書士が直接すべての手続きを代行します。
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             </div>
           </div>
         </section>
