@@ -98,6 +98,64 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Why Us Section */}
+        <section id="why-us" className="py-24 bg-slate-50">
+          <div className="container">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-slate-900 mb-4">
+                当サービスが選ばれる理由
+              </h2>
+              <p className="text-slate-600">
+                徹底的な効率化とデジタル活用により、他社にはない価値を提供します。
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              <Card className="bg-white border-none shadow-lg hover:shadow-xl transition-all">
+                <CardHeader className="text-center pb-2">
+                  <div className="mx-auto bg-sky-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                    <Zap className="h-8 w-8 text-sky-600" />
+                  </div>
+                  <CardTitle className="text-xl text-slate-800">圧倒的なスピード</CardTitle>
+                </CardHeader>
+                <CardContent className="text-center text-slate-600">
+                  <p>
+                    完全オンライン完結のため、郵送や面談の時間をカット。最短3日で会社設立が可能です。
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white border-none shadow-lg hover:shadow-xl transition-all">
+                <CardHeader className="text-center pb-2">
+                  <div className="mx-auto bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                    <ShieldCheck className="h-8 w-8 text-emerald-600" />
+                  </div>
+                  <CardTitle className="text-xl text-slate-800">司法書士による安心対応</CardTitle>
+                </CardHeader>
+                <CardContent className="text-center text-slate-600">
+                  <p>
+                    格安代行業者とは異なり、国家資格を持つ司法書士が責任を持って手続きを行います。
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white border-none shadow-lg hover:shadow-xl transition-all">
+                <CardHeader className="text-center pb-2">
+                  <div className="mx-auto bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                    <Smartphone className="h-8 w-8 text-indigo-600" />
+                  </div>
+                  <CardTitle className="text-xl text-slate-800">スマホで完結</CardTitle>
+                </CardHeader>
+                <CardContent className="text-center text-slate-600">
+                  <p>
+                    マイナンバーカードとスマホがあれば、自宅にいながらすべての手続きが完了します。
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
         {/* Difference Section (Comparison Table) */}
         <section id="difference" className="py-24 bg-white">
           <div className="container">
