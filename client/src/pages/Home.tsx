@@ -33,62 +33,42 @@ export default function Home() {
       </header>
 
       <main className="flex-1">
-        {/* Hero Section - 3 Column Layout */}
-        <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-white to-sky-50/30">
-          <div className="container relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        {/* Hero Section - Full Image with Overlay Button */}
+        <section className="relative w-full bg-slate-50">
+          <div className="container relative py-8 md:py-12 flex flex-col items-center">
+            <div className="relative w-full max-w-6xl mx-auto">
+              <img 
+                src="/hero-full.png" 
+                alt="完全オンライン会社設立 - 申請まで完全代行・電話対応なし・効率重視" 
+                className="w-full h-auto object-contain drop-shadow-sm rounded-xl" 
+              />
               
-              {/* Left Image (Person) - 3 cols */}
-              <div className="lg:col-span-3 order-2 lg:order-1 flex justify-center lg:justify-end">
-                <img 
-                  src="/hero-main.png" 
-                  alt="PC操作をする女性" 
-                  className="w-full max-w-[280px] lg:max-w-full h-auto object-contain drop-shadow-lg transform lg:scale-110 lg:translate-x-4" 
-                />
-              </div>
-
-              {/* Center Content (Text) - 5 cols */}
-              <div className="lg:col-span-5 order-1 lg:order-2 text-center z-20 px-4">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight text-slate-900 whitespace-nowrap">
-                  完全オンライン<br className="hidden lg:block"/>会社設立
-                </h1>
-                <p className="text-lg md:text-xl text-slate-600 mb-8 font-medium">
-                  申請まで完全代行・電話対応なし・効率重視
-                </p>
-                
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-10">
-                  <div className="flex items-center gap-2 bg-white border border-slate-200 px-4 py-2 rounded-full shadow-sm text-slate-700 text-sm font-bold whitespace-nowrap">
-                    <CheckCircle2 className="h-4 w-4 text-emerald-500" />
-                    司法書士による確実な手続き
-                  </div>
-                  <div className="flex items-center gap-2 bg-white border border-slate-200 px-4 py-2 rounded-full shadow-sm text-slate-700 text-sm font-bold whitespace-nowrap">
-                    <CreditCard className="h-4 w-4 text-sky-500" />
-                    マイナンバーカード活用
-                  </div>
-                </div>
-                
-                <Button variant="cta" size="xl" className="w-full sm:w-auto px-12 py-6 text-lg bg-red-500 hover:bg-red-600 text-white shadow-xl shadow-red-500/20 rounded-full transition-transform hover:-translate-y-1" onClick={() => window.location.href='#plans'}>
+              {/* Overlay CTA Button - Positioned absolutely on desktop, relatively on mobile */}
+              <div className="absolute bottom-[15%] left-1/2 transform -translate-x-1/2 w-full text-center hidden md:block">
+                <Button 
+                  variant="cta" 
+                  size="xl" 
+                  className="px-16 py-8 text-xl bg-red-500 hover:bg-red-600 text-white shadow-xl shadow-red-500/30 rounded-full transition-transform hover:-translate-y-1 border-4 border-white/30 backdrop-blur-sm" 
+                  onClick={() => window.location.href='#plans'}
+                >
                   プランを確認して申し込む
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-6 w-6" />
                 </Button>
               </div>
-
-              {/* Right Image (Flow) - 4 cols */}
-              <div className="lg:col-span-4 order-3 lg:order-3 flex justify-center lg:justify-start">
-                <img 
-                  src="/hero-flow.png" 
-                  alt="マイナンバーカードと手続きフロー" 
-                  className="w-full max-w-[320px] lg:max-w-full h-auto object-contain drop-shadow-lg transform lg:-translate-x-4" 
-                />
-              </div>
-
             </div>
-          </div>
-          
-          {/* Background Decorative Elements */}
-          <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
-            <div className="absolute top-1/4 left-0 w-64 h-64 bg-sky-100/50 rounded-full blur-3xl opacity-60 mix-blend-multiply"></div>
-            <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-50/50 rounded-full blur-3xl opacity-60 mix-blend-multiply"></div>
+
+            {/* Mobile CTA Button (Visible only on mobile) */}
+            <div className="mt-6 md:hidden w-full px-4">
+              <Button 
+                variant="cta" 
+                size="xl" 
+                className="w-full py-6 text-lg bg-red-500 hover:bg-red-600 text-white shadow-lg rounded-full" 
+                onClick={() => window.location.href='#plans'}
+              >
+                プランを確認して申し込む
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </div>
           </div>
         </section>
 
