@@ -33,75 +33,41 @@ export default function Home() {
       </header>
 
       <main className="flex-1">
-        {/* Hero Section - Rebuilt with HTML/CSS for High Quality & Scale */}
-        <section className="relative w-full bg-gradient-to-b from-slate-50 to-white overflow-hidden">
-          {/* Background Decorative Elements */}
-          <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-            <div className="absolute -top-[20%] -right-[10%] w-[50%] h-[50%] bg-sky-100/50 rounded-full blur-3xl opacity-60"></div>
-            <div className="absolute top-[20%] -left-[10%] w-[40%] h-[40%] bg-blue-50/50 rounded-full blur-3xl opacity-60"></div>
-          </div>
-
-          <div className="container relative py-16 md:py-24 lg:py-32 flex flex-col items-center">
-            
-            {/* Main Content Container */}
-            <div className="w-full max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center">
+        {/* Hero Section - Full Image with Overlay Button */}
+        <section className="relative w-full bg-slate-50">
+          <div className="container relative py-8 md:py-12 flex flex-col items-center">
+            <div className="relative w-full max-w-6xl mx-auto">
+              <img 
+                src="/hero-full.png" 
+                alt="完全オンライン会社設立 - 申請まで完全代行・電話対応なし・効率重視" 
+                className="w-full h-auto object-contain drop-shadow-sm rounded-xl" 
+              />
               
-              {/* Left Column: Person Image (Visual Anchor) */}
-              <div className="lg:col-span-4 flex justify-center lg:justify-start order-2 lg:order-1">
-                <div className="relative w-full max-w-md">
-                  <div className="absolute inset-0 bg-sky-200/20 rounded-full blur-2xl transform scale-90 translate-y-4"></div>
-                  <img 
-                    src="/hero-person.png" 
-                    alt="PCで作業する女性" 
-                    className="relative z-10 w-full h-auto object-contain drop-shadow-xl transform hover:scale-105 transition-transform duration-500" 
-                  />
-                </div>
+              {/* Overlay CTA Button - Positioned absolutely on desktop, relatively on mobile */}
+              <div className="absolute bottom-[15%] left-1/2 transform -translate-x-1/2 w-full text-center hidden md:block">
+                <Button 
+                  variant="cta" 
+                  size="xl" 
+                  className="px-16 py-8 text-xl bg-red-500 hover:bg-red-600 text-white shadow-xl shadow-red-500/30 rounded-full transition-transform hover:-translate-y-1 border-4 border-white/30 backdrop-blur-sm" 
+                  onClick={() => window.location.href='#plans'}
+                >
+                  プランを確認して申し込む
+                  <ArrowRight className="ml-2 h-6 w-6" />
+                </Button>
               </div>
+            </div>
 
-              {/* Center Column: Text & CTA (Core Message) */}
-              <div className="lg:col-span-4 text-center order-1 lg:order-2 z-20">
-                <Badge variant="outline" className="mb-6 px-4 py-1.5 text-sm font-bold border-sky-500 text-sky-600 bg-sky-50">
-                  司法書士による確実な手続き
-                </Badge>
-                
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
-                  完全オンライン<br/>
-                  <span className="text-sky-500">会社設立</span>
-                </h1>
-                
-                <p className="text-lg md:text-xl text-slate-600 font-medium mb-8 leading-relaxed">
-                  申請まで完全代行・電話対応なし<br/>
-                  <span className="text-slate-500 text-base">効率重視のスマートな起業体験</span>
-                </p>
-
-                <div className="flex flex-col gap-4 items-center w-full max-w-xs mx-auto">
-                  <Button 
-                    variant="cta" 
-                    size="xl" 
-                    className="w-full py-8 text-xl bg-red-500 hover:bg-red-600 text-white shadow-xl shadow-red-500/30 rounded-full transition-all hover:-translate-y-1 border-4 border-white/30 backdrop-blur-sm group" 
-                    onClick={() => window.location.href='#plans'}
-                  >
-                    プランを確認して申し込む
-                    <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                  <p className="text-xs text-slate-400 font-medium">
-                    最短3日で設立可能
-                  </p>
-                </div>
-              </div>
-
-              {/* Right Column: Flow Diagram (Process Visual) */}
-              <div className="lg:col-span-4 flex justify-center lg:justify-end order-3">
-                <div className="relative w-full max-w-md">
-                  <div className="absolute inset-0 bg-blue-100/30 rounded-3xl blur-xl transform rotate-3 scale-95"></div>
-                  <img 
-                    src="/hero-flow.png" 
-                    alt="マイナンバーカードを活用したデジタルフロー" 
-                    className="relative z-10 w-full h-auto object-contain drop-shadow-lg rounded-xl bg-white/50 backdrop-blur-sm border border-white/50 p-2" 
-                  />
-                </div>
-              </div>
-
+            {/* Mobile CTA Button (Visible only on mobile) */}
+            <div className="mt-6 md:hidden w-full px-4">
+              <Button 
+                variant="cta" 
+                size="xl" 
+                className="w-full py-6 text-lg bg-red-500 hover:bg-red-600 text-white shadow-lg rounded-full" 
+                onClick={() => window.location.href='#plans'}
+              >
+                プランを確認して申し込む
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
             </div>
           </div>
         </section>
