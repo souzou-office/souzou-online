@@ -35,11 +35,6 @@ export default function Home() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative py-12 md:py-24 overflow-hidden bg-white">
-          {/* Background Image (Wave) */}
-          <div className="absolute top-0 right-0 w-full h-full pointer-events-none z-0">
-             <img src="/hero-bg.png" alt="" className="w-full h-full object-cover object-right-top opacity-80" />
-          </div>
-          
           <div className="container relative z-10">
             <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
               {/* Left Content */}
@@ -70,9 +65,9 @@ export default function Home() {
               
               {/* Right Image Composition */}
               <div className="flex-1 relative w-full max-w-2xl h-[400px] md:h-[500px] flex items-center justify-center">
-                {/* Person Image */}
+                {/* Main Hero Image (Person/Desk) */}
                 <div className="absolute left-0 bottom-0 w-2/3 z-20 transform translate-y-4">
-                  <img src="/hero-person.png" alt="PC操作をする女性" className="w-full h-auto object-contain drop-shadow-xl" />
+                  <img src="/hero-main.png" alt="PC操作をする女性" className="w-full h-auto object-contain drop-shadow-xl" />
                 </div>
                 
                 {/* Flow/Card Image */}
