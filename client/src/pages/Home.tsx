@@ -43,43 +43,54 @@ export default function Home() {
               
               {/* Left Column: Text Content */}
               <div className="w-full lg:w-1/2 text-center lg:text-left">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-50 border border-yellow-200 text-yellow-700 font-bold text-sm mb-8 shadow-sm">
-                  <span className="bg-yellow-400 text-white text-xs px-1.5 py-0.5 rounded-full">?</span>
-                  質問に答えるだけで
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sky-50 border border-sky-200 text-sky-700 font-bold text-sm mb-8 shadow-sm">
+                  <span className="bg-sky-500 text-white text-xs px-1.5 py-0.5 rounded-full">✓</span>
+                  司法書士による確実な手続き
                 </div>
                 
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-8 tracking-tight">
-                  <span className="text-sky-500">初めての会社設立</span>に<br/>
-                  必要な申請書類が<br/>
-                  すぐ出来る！
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-6 tracking-tight">
+                  完全オンライン<br/>
+                  <span className="text-sky-600">会社設立</span>
                 </h1>
                 
+                <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl leading-relaxed">
+                  申請まで完全代行・電話対応なし<br/>
+                  効率重視のスマートな起業体験
+                </p>
+                
                 <div className="flex flex-col sm:flex-row items-center lg:justify-start justify-center gap-6">
-                  <div className="relative group">
-                    <div className="absolute -top-4 -right-4 bg-white text-red-500 border-2 border-red-500 font-bold rounded-full w-12 h-12 flex items-center justify-center text-sm shadow-md z-20 rotate-12 group-hover:rotate-0 transition-transform">
-                      無料
-                    </div>
-                    <Button 
-                      size="xl" 
-                      className="w-full sm:w-auto px-12 py-8 text-xl bg-red-500 hover:bg-red-600 text-white shadow-xl shadow-red-500/20 rounded-full transition-all hover:-translate-y-1 font-bold border-4 border-red-100"
-                      onClick={() => window.location.href='#plans'}
-                    >
-                      会社設立資料をつくる
-                    </Button>
-                  </div>
+                  <Button 
+                    size="xl" 
+                    className="w-full sm:w-auto px-12 py-8 text-xl bg-red-500 hover:bg-red-600 text-white shadow-xl shadow-red-500/20 rounded-full transition-all hover:-translate-y-1 font-bold border-4 border-red-100"
+                    onClick={() => window.location.href='#plans'}
+                  >
+                    プランを確認して申し込む
+                    <ArrowRight className="ml-2 h-6 w-6" />
+                  </Button>
+                </div>
+                
+                <div className="mt-8 flex items-center lg:justify-start justify-center gap-6 text-sm text-slate-500 font-medium">
+                  <span className="flex items-center gap-1.5">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+                    最短3日で設立
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+                    全国対応
+                  </span>
                 </div>
               </div>
 
               {/* Right Column: Hero Image */}
               <div className="w-full lg:w-1/2 flex justify-center lg:justify-end relative">
                 {/* Decorative Elements */}
-                <div className="absolute top-0 right-0 w-64 h-64 bg-sky-100 rounded-full blur-3xl opacity-50 -z-10"></div>
-                <div className="absolute bottom-0 left-10 w-48 h-48 bg-yellow-100 rounded-full blur-3xl opacity-50 -z-10"></div>
+                <div className="absolute top-0 right-0 w-80 h-80 bg-sky-100 rounded-full blur-3xl opacity-50 -z-10"></div>
+                <div className="absolute bottom-0 left-0 w-64 h-64 bg-yellow-100 rounded-full blur-3xl opacity-50 -z-10"></div>
                 
                 <img 
                   src="/hero-person-ref.png" 
                   alt="会社設立の手続きをする男性のイラスト" 
-                  className="w-full max-w-lg object-contain drop-shadow-xl transform hover:scale-[1.02] transition-transform duration-500"
+                  className="w-full max-w-2xl object-contain drop-shadow-xl transform hover:scale-[1.02] transition-transform duration-500"
                 />
               </div>
               
