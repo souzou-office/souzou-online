@@ -333,10 +333,10 @@ export default function Home() {
                 <div className="absolute top-0 left-0 w-full h-1 bg-slate-300 group-hover:bg-slate-400 transition-colors"></div>
                 <CardHeader className="text-center pb-2 pt-8">
                   <CardTitle className="text-2xl text-slate-700 mb-2">カスタマイズプラン</CardTitle>
-                  <div className="text-3xl font-bold text-slate-900 mb-1">
-                    要見積もり
+                  <div className="text-4xl font-bold text-slate-900 mb-1">
+                    50<span className="text-lg font-normal text-slate-500">万円〜</span>
                   </div>
-                  <p className="text-sm text-slate-500">（お客様の状況に合わせて提案）</p>
+                  <p className="text-sm text-slate-500">（税込 550,000円〜）</p>
                 </CardHeader>
                 <CardContent className="pt-6">
                   <ul className="space-y-4 mb-8">
