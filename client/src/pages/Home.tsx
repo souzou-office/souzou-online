@@ -34,72 +34,57 @@ export default function Home() {
 
       <main className="flex-1">
         {/* Hero Section - Full Image with Overlay Button */}
-        <section className="relative w-full bg-white overflow-hidden py-12 md:py-20 lg:py-24">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
+        <section className="relative w-full bg-white overflow-hidden py-16 md:py-24 lg:py-32">
+          {/* Background Pattern */}
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-[0.03] pointer-events-none"></div>
+          
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
               
-              {/* Left Column: Person Image */}
-              <div className="w-full lg:w-1/4 flex justify-center lg:justify-end order-2 lg:order-1">
-                <img 
-                  src="/hero-person.png" 
-                  alt="PCで作業する女性" 
-                  className="w-64 md:w-80 lg:w-full max-w-xs object-contain drop-shadow-md"
-                />
-              </div>
-
-              {/* Center Column: Text & CTA */}
-              <div className="w-full lg:w-2/4 text-center order-1 lg:order-2 z-10">
-                <Badge variant="outline" className="mb-6 px-4 py-1.5 text-sky-600 border-sky-200 bg-sky-50 text-sm font-medium rounded-full">
-                  司法書士による確実な手続き
-                </Badge>
+              {/* Left Column: Text Content */}
+              <div className="w-full lg:w-1/2 text-center lg:text-left">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-50 border border-yellow-200 text-yellow-700 font-bold text-sm mb-8 shadow-sm">
+                  <span className="bg-yellow-400 text-white text-xs px-1.5 py-0.5 rounded-full">?</span>
+                  質問に答えるだけで
+                </div>
                 
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-6 tracking-tight">
-                  完全オンライン<br/>
-                  <span className="text-sky-600">会社設立</span>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-8 tracking-tight">
+                  <span className="text-sky-500">初めての会社設立</span>に<br/>
+                  必要な申請書類が<br/>
+                  すぐ出来る！
                 </h1>
                 
-                <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-                  申請まで完全代行・電話対応なし<br className="hidden md:block"/>
-                  効率重視のスマートな起業体験
-                </p>
-                
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                  <Button 
-                    size="xl" 
-                    className="w-full sm:w-auto px-10 py-7 text-xl bg-red-500 hover:bg-red-600 text-white shadow-xl shadow-red-500/20 rounded-full transition-all hover:-translate-y-1 font-bold"
-                    onClick={() => window.location.href='#plans'}
-                  >
-                    プランを確認して申し込む
-                    <ArrowRight className="ml-2 h-6 w-6" />
-                  </Button>
-                </div>
-                
-                <div className="mt-8 flex items-center justify-center gap-6 text-sm text-slate-500 font-medium">
-                  <span className="flex items-center gap-1.5">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-500" />
-                    最短3日で設立
-                  </span>
-                  <span className="flex items-center gap-1.5">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-500" />
-                    全国対応
-                  </span>
+                <div className="flex flex-col sm:flex-row items-center lg:justify-start justify-center gap-6">
+                  <div className="relative group">
+                    <div className="absolute -top-4 -right-4 bg-white text-red-500 border-2 border-red-500 font-bold rounded-full w-12 h-12 flex items-center justify-center text-sm shadow-md z-20 rotate-12 group-hover:rotate-0 transition-transform">
+                      無料
+                    </div>
+                    <Button 
+                      size="xl" 
+                      className="w-full sm:w-auto px-12 py-8 text-xl bg-red-500 hover:bg-red-600 text-white shadow-xl shadow-red-500/20 rounded-full transition-all hover:-translate-y-1 font-bold border-4 border-red-100"
+                      onClick={() => window.location.href='#plans'}
+                    >
+                      会社設立資料をつくる
+                    </Button>
+                  </div>
                 </div>
               </div>
 
-              {/* Right Column: Flow Image */}
-              <div className="w-full lg:w-1/4 flex justify-center lg:justify-start order-3">
+              {/* Right Column: Hero Image */}
+              <div className="w-full lg:w-1/2 flex justify-center lg:justify-end relative">
+                {/* Decorative Elements */}
+                <div className="absolute top-0 right-0 w-64 h-64 bg-sky-100 rounded-full blur-3xl opacity-50 -z-10"></div>
+                <div className="absolute bottom-0 left-10 w-48 h-48 bg-yellow-100 rounded-full blur-3xl opacity-50 -z-10"></div>
+                
                 <img 
-                  src="/hero-flow.png" 
-                  alt="マイナンバーカードを活用した手続きフロー" 
-                  className="w-64 md:w-80 lg:w-full max-w-xs object-contain drop-shadow-md"
+                  src="/hero-person-ref.png" 
+                  alt="会社設立の手続きをする男性のイラスト" 
+                  className="w-full max-w-lg object-contain drop-shadow-xl transform hover:scale-[1.02] transition-transform duration-500"
                 />
               </div>
               
             </div>
           </div>
-          
-          {/* Background Decoration */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-b from-slate-50/80 to-white -z-10 rounded-[100%] blur-3xl opacity-60 pointer-events-none"></div>
         </section>
 
         {/* Difference Section (Comparison Table) */}
