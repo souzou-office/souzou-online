@@ -3,52 +3,119 @@ import { AlertTriangle, ArrowRight, Check, CheckCircle2, CreditCard, FileText, S
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 font-sans">
+    <div className="min-h-screen flex flex-col bg-white font-sans text-slate-800">
       {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b bg-white/90 backdrop-blur-md shadow-sm">
-        <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-2 font-bold text-xl text-slate-800">
-            <ShieldCheck className="h-6 w-6 text-blue-600" />
-            <span>完全オンライン会社設立</span>
+      <header className="sticky top-0 z-50 w-full border-b border-slate-100 bg-white/95 backdrop-blur-sm shadow-sm">
+        <div className="container flex h-20 items-center justify-between">
+          {/* Logo */}
+          <div className="flex items-center">
+            <img src="/logo.png" alt="司法書士法人そうぞう" className="h-10 md:h-12 w-auto object-contain" />
           </div>
-          <nav className="hidden md:flex gap-8 text-sm font-medium text-slate-600">
-            <a href="#difference" className="hover:text-blue-600 transition-colors">他社との違い</a>
-            <a href="#details" className="hover:text-blue-600 transition-colors">サービス詳細</a>
-            <a href="#plans" className="hover:text-blue-600 transition-colors">料金プラン</a>
-            <a href="#flow" className="hover:text-blue-600 transition-colors">流れ</a>
-          </nav>
-          <Button variant="default" size="sm" className="hidden md:inline-flex bg-red-500 hover:bg-red-600 text-white border-none shadow-md" onClick={() => window.location.href='#plans'}>
-            プランを見る
-          </Button>
+          
+          {/* Desktop Nav */}
+          <div className="hidden md:flex items-center gap-8">
+            <nav className="flex gap-6 text-sm font-medium text-slate-600">
+              <a href="#difference" className="hover:text-sky-500 transition-colors">他社との違い</a>
+              <a href="#details" className="hover:text-sky-500 transition-colors">サービス詳細</a>
+              <a href="#plans" className="hover:text-sky-500 transition-colors">料金プラン</a>
+              <a href="#flow" className="hover:text-sky-500 transition-colors">流れ</a>
+            </nav>
+            <div className="flex gap-3">
+              <Button variant="outline" size="sm" className="border-sky-500 text-sky-600 hover:bg-sky-50">
+                申請質問
+              </Button>
+              <Button variant="default" size="sm" className="bg-sky-500 hover:bg-sky-600 text-white shadow-md">
+                通知定款情報の変更
+              </Button>
+            </div>
+          </div>
         </div>
       </header>
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative py-24 md:py-32 overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 text-white">
-          <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.05] pointer-events-none" />
-          <div className="container relative z-10 text-center">
-            <Badge variant="secondary" className="mb-8 px-6 py-2 text-base bg-red-500/20 text-red-200 border-red-500/50 backdrop-blur-sm">
-              <span className="mr-2">✨</span> 申請まで完全代行・3万円から
-            </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 leading-tight">
-              完全オンライン会社設立
-            </h1>
-            <p className="text-xl md:text-2xl text-slate-300 mb-10 font-light">
-              申請まで完全代行・電話対応なし・効率重視
-            </p>
-            
-            <div className="flex flex-col items-center gap-8 max-w-3xl mx-auto">
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-8 py-4 text-lg font-medium flex flex-wrap justify-center items-center gap-4 shadow-lg">
-                <span className="flex items-center gap-2"><CheckCircle2 className="h-5 w-5 text-emerald-400" /> 司法書士による確実な手続き</span>
-                <span className="hidden md:inline w-1 h-1 bg-white/30 rounded-full" />
-                <span className="flex items-center gap-2"><CreditCard className="h-5 w-5 text-blue-400" /> マイナンバーカード活用</span>
+        <section className="relative py-20 md:py-32 overflow-hidden bg-white">
+          {/* Background Elements (Abstract Shapes) */}
+          <div className="absolute top-0 right-0 w-1/2 h-full bg-sky-50/50 -skew-x-12 translate-x-1/4 -z-10" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-50 rounded-full blur-3xl opacity-50 -z-10" />
+          
+          <div className="container relative z-10">
+            <div className="flex flex-col md:flex-row items-center gap-12">
+              {/* Left Content */}
+              <div className="flex-1 text-center md:text-left">
+                <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 leading-tight text-slate-900">
+                  完全オンライン会社設立
+                </h1>
+                <p className="text-xl md:text-2xl text-slate-600 mb-8 font-medium">
+                  申請まで完全代行・電話対応なし・効率重視
+                </p>
+                
+                <div className="flex flex-col sm:flex-row items-center gap-4 mb-10 justify-center md:justify-start">
+                  <div className="flex items-center gap-2 bg-white border border-slate-200 px-4 py-2 rounded-full shadow-sm text-slate-700 font-medium">
+                    <CheckCircle2 className="h-5 w-5 text-emerald-500" />
+                    司法書士による確実な手続き
+                  </div>
+                  <div className="flex items-center gap-2 bg-white border border-slate-200 px-4 py-2 rounded-full shadow-sm text-slate-700 font-medium">
+                    <CreditCard className="h-5 w-5 text-sky-500" />
+                    マイナンバーカード活用
+                  </div>
+                </div>
+                
+                <Button variant="cta" size="xl" className="w-full sm:w-auto px-10 py-6 text-lg bg-red-500 hover:bg-red-600 text-white shadow-xl shadow-red-500/20 rounded-full transition-transform hover:-translate-y-1" onClick={() => window.location.href='#plans'}>
+                  プランを確認して申し込む
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
               </div>
               
-              <Button variant="cta" size="xl" className="w-full sm:w-auto px-12 py-8 text-xl bg-red-500 hover:bg-red-600 text-white shadow-2xl shadow-red-500/30 mt-4 rounded-full transition-transform hover:-translate-y-1" onClick={() => window.location.href='#plans'}>
-                プランを確認して申し込む
-                <ArrowRight className="ml-2 h-6 w-6" />
-              </Button>
+              {/* Right Image (Illustration Placeholder) */}
+              <div className="flex-1 relative w-full max-w-lg">
+                {/* Main Illustration Composition */}
+                <div className="relative">
+                  {/* My Number Card Illustration */}
+                  <div className="bg-white p-4 rounded-xl shadow-lg border border-slate-100 mb-6 relative z-20 transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-12 h-12 bg-slate-200 rounded-full flex items-center justify-center">
+                        <Smartphone className="h-6 w-6 text-slate-400" />
+                      </div>
+                      <div>
+                        <div className="h-3 w-32 bg-slate-200 rounded mb-2" />
+                        <div className="h-2 w-20 bg-slate-100 rounded" />
+                      </div>
+                    </div>
+                    <div className="h-24 bg-sky-50 rounded-lg border border-sky-100 flex items-center justify-center text-sky-300">
+                      マイナンバーカード読取
+                    </div>
+                  </div>
+                  
+                  {/* Flow Arrows */}
+                  <div className="absolute top-1/2 -right-4 md:-right-12 z-10 hidden md:block">
+                    <div className="flex flex-col gap-2">
+                      <div className="w-2 h-2 bg-sky-300 rounded-full" />
+                      <div className="w-2 h-2 bg-sky-300 rounded-full" />
+                      <div className="w-2 h-2 bg-sky-300 rounded-full" />
+                    </div>
+                  </div>
+
+                  {/* Dashboard UI */}
+                  <div className="bg-white p-6 rounded-xl shadow-xl border border-slate-100 relative z-10 transform -rotate-1 hover:rotate-0 transition-transform duration-500 ml-8 md:ml-12 -mt-12">
+                    <div className="flex gap-4 mb-6">
+                      <div className="flex-1 h-20 bg-emerald-50 rounded-lg border border-emerald-100 flex flex-col items-center justify-center p-2">
+                        <Check className="h-6 w-6 text-emerald-500 mb-1" />
+                        <span className="text-xs text-emerald-600 font-bold">電子署名完了</span>
+                      </div>
+                      <div className="flex-1 h-20 bg-sky-50 rounded-lg border border-sky-100 flex flex-col items-center justify-center p-2">
+                        <FileText className="h-6 w-6 text-sky-500 mb-1" />
+                        <span className="text-xs text-sky-600 font-bold">登記申請中</span>
+                      </div>
+                    </div>
+                    <div className="space-y-3">
+                      <div className="h-2 w-full bg-slate-100 rounded" />
+                      <div className="h-2 w-3/4 bg-slate-100 rounded" />
+                      <div className="h-2 w-5/6 bg-slate-100 rounded" />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -71,7 +138,7 @@ export default function Home() {
                   <thead>
                     <tr className="bg-slate-800 text-white">
                       <th className="p-6 font-bold text-center w-1/4">比較項目</th>
-                      <th className="p-6 font-bold text-center w-1/3 bg-emerald-600 relative">
+                      <th className="p-6 font-bold text-center w-1/3 bg-sky-600 relative">
                         当サービス
                         <div className="absolute top-0 right-0 bg-yellow-400 text-slate-900 text-[10px] font-bold px-2 py-0.5">RECOMMENDED</div>
                       </th>
@@ -81,27 +148,27 @@ export default function Home() {
                   <tbody className="text-slate-700">
                     <tr className="border-b border-slate-100 hover:bg-slate-50">
                       <td className="p-5 font-bold text-center bg-slate-50">費用</td>
-                      <td className="p-5 text-center font-bold text-red-500 bg-emerald-50/30 text-lg">3万円〜</td>
+                      <td className="p-5 text-center font-bold text-red-500 bg-sky-50/30 text-lg">3万円〜</td>
                       <td className="p-5 text-center text-slate-500">10万円〜</td>
                     </tr>
                     <tr className="border-b border-slate-100 hover:bg-slate-50">
                       <td className="p-5 font-bold text-center bg-slate-50">来所・面談</td>
-                      <td className="p-5 text-center font-bold text-emerald-600 bg-emerald-50/30">一切不要（完全オンライン）</td>
+                      <td className="p-5 text-center font-bold text-sky-600 bg-sky-50/30">一切不要（完全オンライン）</td>
                       <td className="p-5 text-center text-slate-500">必須（複数回）</td>
                     </tr>
                     <tr className="border-b border-slate-100 hover:bg-slate-50">
                       <td className="p-5 font-bold text-center bg-slate-50">印鑑証明書</td>
-                      <td className="p-5 text-center font-bold text-emerald-600 bg-emerald-50/30">不要（マイナンバーカード）</td>
+                      <td className="p-5 text-center font-bold text-sky-600 bg-sky-50/30">不要（マイナンバーカード）</td>
                       <td className="p-5 text-center text-slate-500">必須（取得の手間あり）</td>
                     </tr>
                     <tr className="border-b border-slate-100 hover:bg-slate-50">
                       <td className="p-5 font-bold text-center bg-slate-50">対応スピード</td>
-                      <td className="p-5 text-center font-bold text-emerald-600 bg-emerald-50/30">最短3日</td>
+                      <td className="p-5 text-center font-bold text-sky-600 bg-sky-50/30">最短3日</td>
                       <td className="p-5 text-center text-slate-500">2週間〜1ヶ月</td>
                     </tr>
                     <tr className="hover:bg-slate-50">
                       <td className="p-5 font-bold text-center bg-slate-50">定款印紙代</td>
-                      <td className="p-5 text-center font-bold text-emerald-600 bg-emerald-50/30">0円（電子定款）</td>
+                      <td className="p-5 text-center font-bold text-sky-600 bg-sky-50/30">0円（電子定款）</td>
                       <td className="p-5 text-center text-slate-500">4万円（紙の場合）</td>
                     </tr>
                   </tbody>
@@ -125,7 +192,7 @@ export default function Home() {
 
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {/* 代行すること (Green) */}
-              <Card className="border-t-4 border-t-emerald-500 shadow-lg hover:shadow-xl transition-all">
+              <Card className="border-t-4 border-t-emerald-500 shadow-lg hover:shadow-xl transition-all bg-white">
                 <CardHeader className="text-center pb-2">
                   <div className="mx-auto bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
                     <Check className="h-8 w-8 text-emerald-600" />
@@ -144,7 +211,7 @@ export default function Home() {
               </Card>
 
               {/* 対応できないこと (Red) */}
-              <Card className="border-t-4 border-t-red-500 shadow-lg hover:shadow-xl transition-all">
+              <Card className="border-t-4 border-t-red-500 shadow-lg hover:shadow-xl transition-all bg-white">
                 <CardHeader className="text-center pb-2">
                   <div className="mx-auto bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
                     <X className="h-8 w-8 text-red-600" />
@@ -163,20 +230,20 @@ export default function Home() {
               </Card>
 
               {/* 必要なもの (Blue) */}
-              <Card className="border-t-4 border-t-blue-500 shadow-lg hover:shadow-xl transition-all">
+              <Card className="border-t-4 border-t-sky-500 shadow-lg hover:shadow-xl transition-all bg-white">
                 <CardHeader className="text-center pb-2">
-                  <div className="mx-auto bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
-                    <FileText className="h-8 w-8 text-blue-600" />
+                  <div className="mx-auto bg-sky-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                    <FileText className="h-8 w-8 text-sky-600" />
                   </div>
-                  <CardTitle className="text-xl text-blue-600">必要なもの</CardTitle>
+                  <CardTitle className="text-xl text-sky-600">必要なもの</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3 text-slate-600">
-                    <li className="flex items-start gap-2"><span className="text-blue-500 font-bold">•</span> マイナンバーカード</li>
-                    <li className="flex items-start gap-2"><span className="text-blue-500 font-bold">•</span> カードリーダー/スマホ</li>
-                    <li className="flex items-start gap-2"><span className="text-blue-500 font-bold">•</span> 会社基本情報</li>
-                    <li className="flex items-start gap-2"><span className="text-blue-500 font-bold">•</span> 資本金払込み</li>
-                    <li className="flex items-start gap-2"><span className="text-blue-500 font-bold">•</span> 印鑑証明書（プランにより）</li>
+                    <li className="flex items-start gap-2"><span className="text-sky-500 font-bold">•</span> マイナンバーカード</li>
+                    <li className="flex items-start gap-2"><span className="text-sky-500 font-bold">•</span> カードリーダー/スマホ</li>
+                    <li className="flex items-start gap-2"><span className="text-sky-500 font-bold">•</span> 会社基本情報</li>
+                    <li className="flex items-start gap-2"><span className="text-sky-500 font-bold">•</span> 資本金払込み</li>
+                    <li className="flex items-start gap-2"><span className="text-sky-500 font-bold">•</span> 印鑑証明書（プランにより）</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -198,7 +265,7 @@ export default function Home() {
         </section>
 
         {/* Plans Section */}
-        <section id="plans" className="py-24 bg-slate-50">
+        <section id="plans" className="py-24 bg-sky-50">
           <div className="container">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-slate-900 mb-4">
@@ -211,7 +278,7 @@ export default function Home() {
 
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {/* Light Plan */}
-              <Card className="border-none shadow-md hover:shadow-xl transition-all duration-300 relative overflow-hidden group flex flex-col">
+              <Card className="border-none shadow-md hover:shadow-xl transition-all duration-300 relative overflow-hidden group flex flex-col bg-white">
                 <div className="absolute top-0 left-0 w-full h-1 bg-slate-300 group-hover:bg-slate-400 transition-colors" />
                 <CardHeader className="text-center pb-2">
                   <CardTitle className="text-xl text-slate-700">ライトプラン</CardTitle>
@@ -240,7 +307,7 @@ export default function Home() {
               </Card>
 
               {/* Middle Plan */}
-              <Card className="border-none shadow-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden transform md:-translate-y-4 z-10 flex flex-col">
+              <Card className="border-none shadow-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden transform md:-translate-y-4 z-10 flex flex-col bg-white">
                 <div className="absolute top-0 left-0 w-full h-1.5 bg-red-500" />
                 <div className="absolute top-4 right-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">人気</div>
                 <CardHeader className="text-center pb-2">
@@ -271,7 +338,7 @@ export default function Home() {
               </Card>
 
               {/* High Plan */}
-              <Card className="border-none shadow-md hover:shadow-xl transition-all duration-300 relative overflow-hidden group flex flex-col">
+              <Card className="border-none shadow-md hover:shadow-xl transition-all duration-300 relative overflow-hidden group flex flex-col bg-white">
                 <div className="absolute top-0 left-0 w-full h-1 bg-slate-300 group-hover:bg-slate-400 transition-colors" />
                 <CardHeader className="text-center pb-2">
                   <CardTitle className="text-xl text-slate-700">高額プラン</CardTitle>
@@ -329,7 +396,7 @@ export default function Home() {
                 { step: 5, title: "設立完了", desc: "登記完了後、各種書類をお渡し。会社設立完了です" },
               ].map((item, index) => (
                 <div key={index} className="relative flex flex-col items-center text-center group">
-                  <div className="w-16 h-16 rounded-full bg-slate-800 text-white flex items-center justify-center text-2xl font-bold mb-6 shadow-lg group-hover:bg-red-500 transition-colors relative z-10">
+                  <div className="w-16 h-16 rounded-full bg-sky-500 text-white flex items-center justify-center text-2xl font-bold mb-6 shadow-lg group-hover:bg-red-500 transition-colors relative z-10">
                     {item.step}
                   </div>
                   {index < 4 && (
@@ -344,7 +411,7 @@ export default function Home() {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-24 bg-slate-800 text-white">
+        <section className="py-24 bg-slate-900 text-white">
           <div className="container">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold mb-4">
@@ -400,14 +467,13 @@ export default function Home() {
       <footer className="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
         <div className="container text-center">
           <div className="flex items-center justify-center gap-2 font-bold text-xl text-white mb-4">
-            <ShieldCheck className="h-6 w-6" />
-            <span>完全オンライン会社設立</span>
+            <img src="/logo.png" alt="司法書士法人そうぞう" className="h-8 w-auto brightness-0 invert opacity-80" />
           </div>
           <p className="text-sm mb-8">
-            [事務所名] 司法書士事務所
+            司法書士法人そうぞう
           </p>
           <div className="text-xs text-slate-600">
-            © 2025 [事務所名] 司法書士事務所. All rights reserved.<br />
+            © 2025 司法書士法人そうぞう. All rights reserved.<br />
             福岡市 | 司法書士 | 会社設立専門
           </div>
         </div>
