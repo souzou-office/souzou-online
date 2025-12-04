@@ -477,7 +477,7 @@ export default function Home() {
                       <span className="line-through">社保届出</span>
                     </li>
                   </ul>
-                  <Button className="w-full bg-slate-800 hover:bg-slate-900 text-white" onClick={() => window.open('https://wkf.ms/4iz6m6c', '_blank')}>
+                  <Button className="w-full bg-slate-800 group-hover:bg-sky-500 hover:!bg-sky-600 text-white transition-colors duration-300" onClick={() => window.open('https://wkf.ms/4iz6m6c', '_blank')}>
                     このプランで申し込む
                   </Button>
                 </CardContent>
@@ -519,7 +519,7 @@ export default function Home() {
                       <span className="line-through">社保届出</span>
                     </li>
                   </ul>
-                  <Button size="lg" className="w-full bg-sky-500 hover:bg-sky-600 text-white shadow-lg shadow-sky-500/20 font-bold" onClick={() => window.open('https://wkf.ms/48kjyZv', '_blank')}>
+                  <Button size="lg" className="w-full bg-slate-800 group-hover:bg-sky-500 hover:!bg-sky-600 text-white shadow-lg group-hover:shadow-sky-500/20 font-bold transition-all duration-300" onClick={() => window.open('https://wkf.ms/48kjyZv', '_blank')}>
                     このプランで申し込む
                   </Button>
                 </CardContent>
@@ -558,7 +558,7 @@ export default function Home() {
                       <span className="text-slate-600">事業計画書作成サポート</span>
                     </li>
                   </ul>
-                  <Button className="w-full bg-slate-800 hover:bg-slate-900 text-white" onClick={() => window.open('https://wkf.ms/4oBn46B', '_blank')}>
+                  <Button className="w-full bg-slate-800 group-hover:bg-sky-500 hover:!bg-sky-600 text-white transition-colors duration-300" onClick={() => window.open('https://wkf.ms/4oBn46B', '_blank')}>
                     このプランで申し込む
                   </Button>
                 </CardContent>
