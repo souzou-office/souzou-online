@@ -448,7 +448,7 @@ export default function Home() {
               <Card className="border border-slate-200 shadow-sm hover:shadow-xl hover:border-sky-500 transition-all relative overflow-hidden group">
                 <div className="absolute top-0 left-0 w-full h-1 bg-slate-300 group-hover:bg-sky-500 transition-colors"></div>
                 <CardHeader className="text-center pb-2 pt-8">
-                  <CardTitle className="text-2xl text-slate-700 group-hover:text-sky-600 transition-colors mb-2">ライトプラン</CardTitle>
+                  <CardTitle className="text-2xl font-bold text-slate-700 group-hover:text-sky-600 transition-colors mb-2">ライトプラン</CardTitle>
                   <div className="text-4xl font-bold text-slate-900 mb-1">
                     49,800<span className="text-lg font-normal text-slate-500">円</span>
                   </div>
@@ -490,8 +490,8 @@ export default function Home() {
                   人気No.1
                 </div>
                 <CardHeader className="text-center pb-2 pt-8">
-                  <CardTitle className="text-2xl text-slate-700 group-hover:text-sky-600 transition-colors mb-2">ミドルプラン</CardTitle>
-                  <div className="text-5xl font-bold text-slate-900 mb-1">
+                  <CardTitle className="text-2xl font-bold text-slate-700 group-hover:text-sky-600 transition-colors mb-2">ミドルプラン</CardTitle>
+                  <div className="text-4xl font-bold text-slate-900 mb-1">
                     99,800<span className="text-lg font-normal text-slate-500">円</span>
                   </div>
                   <p className="text-sm text-slate-500">（税込 109,780円）</p>
@@ -529,7 +529,7 @@ export default function Home() {
               <Card className="border border-slate-200 shadow-sm hover:shadow-xl hover:border-sky-500 transition-all relative overflow-hidden group">
                 <div className="absolute top-0 left-0 w-full h-1 bg-slate-300 group-hover:bg-sky-500 transition-colors"></div>
                 <CardHeader className="text-center pb-2 pt-8">
-                  <CardTitle className="text-2xl text-slate-700 group-hover:text-sky-600 transition-colors mb-2">カスタマイズプラン</CardTitle>
+                  <CardTitle className="text-2xl font-bold text-slate-700 group-hover:text-sky-600 transition-colors mb-2">カスタマイズプラン</CardTitle>
                   <div className="text-4xl font-bold text-slate-900 mb-1">
                     500,000<span className="text-lg font-normal text-slate-500">円〜</span>
                   </div>
