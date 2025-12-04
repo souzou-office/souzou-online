@@ -680,7 +680,7 @@ export default function Home() {
               無理な勧誘は一切ありませんので、お気軽にご相談ください。
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="xl" className="w-full sm:w-auto px-10 py-6 text-lg bg-sky-500 hover:bg-sky-600 text-white font-bold rounded-full shadow-lg shadow-sky-500/20">
+              <Button size="xl" className="w-full sm:w-auto px-10 py-6 text-lg bg-sky-500 hover:bg-sky-600 text-white font-bold rounded-full shadow-lg shadow-sky-500/20" onClick={() => document.getElementById('plans')?.scrollIntoView({ behavior: 'smooth' })}>
                 プランを確認して申し込む
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
