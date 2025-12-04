@@ -477,7 +477,7 @@ export default function Home() {
                       <span className="line-through">社保届出</span>
                     </li>
                   </ul>
-                  <Button className="w-full bg-slate-800 hover:bg-slate-900 text-white">
+                  <Button className="w-full bg-slate-800 hover:bg-slate-900 text-white" onClick={() => window.open('https://wkf.ms/4iz6m6c', '_blank')}>
                     このプランで申し込む
                   </Button>
                 </CardContent>
@@ -519,7 +519,7 @@ export default function Home() {
                       <span className="line-through">社保届出</span>
                     </li>
                   </ul>
-                  <Button size="lg" className="w-full bg-sky-500 hover:bg-sky-600 text-white shadow-lg shadow-sky-500/20 font-bold">
+                  <Button size="lg" className="w-full bg-sky-500 hover:bg-sky-600 text-white shadow-lg shadow-sky-500/20 font-bold" onClick={() => window.open('https://wkf.ms/48kjyZv', '_blank')}>
                     このプランで申し込む
                   </Button>
                 </CardContent>
@@ -558,8 +558,8 @@ export default function Home() {
                       <span className="text-slate-600">事業計画書作成サポート</span>
                     </li>
                   </ul>
-                  <Button className="w-full bg-slate-800 hover:bg-slate-900 text-white">
-                    お問い合わせ
+                  <Button className="w-full bg-slate-800 hover:bg-slate-900 text-white" onClick={() => window.open('https://wkf.ms/4oBn46B', '_blank')}>
+                    このプランで申し込む
                   </Button>
                 </CardContent>
               </Card>
@@ -709,15 +709,7 @@ export default function Home() {
                 <li><a href="#flow" className="hover:text-sky-500">ご利用の流れ</a></li>
               </ul>
             </div>
-            <div>
-              <h4 className="font-bold text-slate-900 mb-4">会社情報</h4>
-              <ul className="space-y-2 text-sm text-slate-600">
-                <li><a href="#" className="hover:text-sky-500">運営会社</a></li>
-                <li><a href="#" className="hover:text-sky-500">プライバシーポリシー</a></li>
-                <li><a href="#" className="hover:text-sky-500">特定商取引法に基づく表記</a></li>
-                <li><a href="#" className="hover:text-sky-500">お問い合わせ</a></li>
-              </ul>
-            </div>
+
           </div>
           <div className="border-t border-slate-200 pt-8 text-center text-sm text-slate-400">
             © {new Date().getFullYear()} 司法書士法人そうぞう All rights reserved.
