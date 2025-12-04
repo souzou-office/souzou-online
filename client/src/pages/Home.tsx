@@ -534,7 +534,7 @@ export default function Home() {
                 <CardHeader className="text-center pb-2 pt-8">
                   <CardTitle className="text-2xl text-slate-700 mb-2">カスタマイズプラン</CardTitle>
                   <div className="text-4xl font-bold text-slate-900 mb-1">
-                    50<span className="text-lg font-normal text-slate-500">万円〜</span>
+                    500,000<span className="text-lg font-normal text-slate-500">円〜</span>
                   </div>
                   <p className="text-sm text-slate-500">（税込 550,000円〜）</p>
                 </CardHeader>
