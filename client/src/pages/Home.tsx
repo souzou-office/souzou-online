@@ -21,11 +21,8 @@ export default function Home() {
               <a href="#flow" className="hover:text-sky-500 transition-colors">流れ</a>
             </nav>
             <div className="flex gap-3">
-              <Button variant="outline" size="sm" className="border-sky-500 text-sky-600 hover:bg-sky-50">
-                申請質問
-              </Button>
-              <Button variant="default" size="sm" className="bg-sky-500 hover:bg-sky-600 text-white shadow-md">
-                通知定款情報の変更
+              <Button variant="default" size="sm" className="bg-red-500 hover:bg-red-600 text-white shadow-md font-bold" onClick={() => document.getElementById('plans')?.scrollIntoView({ behavior: 'smooth' })}>
+                プランを確認して申し込む
               </Button>
             </div>
           </div>
