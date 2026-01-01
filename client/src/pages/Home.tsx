@@ -41,7 +41,7 @@ export default function Home() {
               {/* Left Column: Text Content */}
               <div className="w-full lg:w-5/12 text-center lg:text-left">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-6 tracking-tight">
-                  <span className="text-sky-600">デジ</span>設立
+                  はじめての<span className="text-sky-600">会社設立</span>
                 </h1>
                 
                 <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl leading-relaxed font-bold">
