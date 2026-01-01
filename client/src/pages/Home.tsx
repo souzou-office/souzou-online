@@ -40,20 +40,28 @@ export default function Home() {
               
               {/* Left Column: Text Content */}
               <div className="w-full lg:w-5/12 text-center lg:text-left">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sky-50 border border-sky-200 text-sky-700 font-bold text-sm mb-8 shadow-sm">
-                  <span className="bg-sky-500 text-white text-xs px-1.5 py-0.5 rounded-full">✓</span>
-                  司法書士による確実な手続き
-                </div>
-                
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-6 tracking-tight">
-                  完全オンライン<br/>
-                  <span className="text-sky-600">会社設立</span>
+                  <span className="text-sky-600">デジ</span>設立
                 </h1>
                 
-                <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl leading-relaxed">
-                  申請まで完全代行・電話対応なし<br/>
-                  効率重視のスマートな起業体験
+                <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl leading-relaxed font-bold">
+                  〜スマホで完結。司法書士によるスピーディーな起業体験〜
                 </p>
+
+                <div className="flex flex-col gap-3 mb-10">
+                  <div className="flex items-center gap-2 text-slate-700 font-bold text-lg">
+                    <span className="bg-sky-500 text-white text-xs px-1.5 py-0.5 rounded-full">✓</span>
+                    司法書士による確実な手続き
+                  </div>
+                  <div className="flex items-center gap-2 text-slate-700 font-bold text-lg">
+                    <span className="bg-sky-500 text-white text-xs px-1.5 py-0.5 rounded-full">✓</span>
+                    完全オンライン
+                  </div>
+                  <div className="flex items-center gap-2 text-slate-700 font-bold text-lg">
+                    <span className="bg-sky-500 text-white text-xs px-1.5 py-0.5 rounded-full">✓</span>
+                    会社設立
+                  </div>
+                </div>
                 
                 <div className="flex flex-col sm:flex-row items-center lg:justify-start justify-center gap-6">
                   <Button 
